@@ -1,0 +1,233 @@
+[
+ {
+  "id": "testosterone_total",
+  "name": "Total testosterone",
+  "unit": "ng/dL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "estradiol",
+  "name": "Estradiol",
+  "unit": "pg/mL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "shbg",
+  "name": "SHBG",
+  "unit": "nmol/L",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "testosterone_free",
+  "name": "Free testosterone (calculated, Vermeulen)",
+  "unit": "pg/mL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L + BIOPRO_L albumin)"
+ },
+ {
+  "id": "progesterone",
+  "name": "Progesterone",
+  "unit": "ng/dL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "androstenedione",
+  "name": "Androstenedione",
+  "unit": "ng/dL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "hydroxyprogesterone_17",
+  "name": "17-hydroxyprogesterone",
+  "unit": "ng/dL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "amh",
+  "name": "Anti-Mullerian hormone (AMH)",
+  "unit": "ng/mL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "fsh",
+  "name": "Follicle-stimulating hormone (FSH)",
+  "unit": "mIU/mL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "lh",
+  "name": "Luteinizing hormone (LH)",
+  "unit": "mIU/mL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "estrone",
+  "name": "Estrone",
+  "unit": "pg/mL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "estrone_sulfate",
+  "name": "Estrone sulfate",
+  "unit": "pg/mL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "dhea_s",
+  "name": "DHEA sulfate (DHEA-S)",
+  "unit": "ug/dL",
+  "group": "sex_hormones",
+  "source": "NHANES 2021-2023 (TST_L)"
+ },
+ {
+  "id": "tsh",
+  "name": "TSH",
+  "unit": "mIU/L",
+  "group": "thyroid",
+  "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)"
+ },
+ {
+  "id": "free_t4",
+  "name": "Free T4",
+  "unit": "ng/dL",
+  "group": "thyroid",
+  "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)"
+ },
+ {
+  "id": "free_t3",
+  "name": "Free T3",
+  "unit": "pg/mL",
+  "group": "thyroid",
+  "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)"
+ },
+ {
+  "id": "total_t4",
+  "name": "Total T4",
+  "unit": "ug/dL",
+  "group": "thyroid",
+  "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)"
+ },
+ {
+  "id": "total_t3",
+  "name": "Total T3",
+  "unit": "ng/dL",
+  "group": "thyroid",
+  "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)"
+ },
+ {
+  "id": "tpo_antibodies",
+  "name": "Thyroid peroxidase antibodies (TPOAb)",
+  "unit": "IU/mL",
+  "group": "thyroid",
+  "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)"
+ },
+ {
+  "id": "thyroglobulin_antibodies",
+  "name": "Thyroglobulin antibodies (TgAb)",
+  "unit": "IU/mL",
+  "group": "thyroid",
+  "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)"
+ },
+ {
+  "id": "thyroglobulin",
+  "name": "Thyroglobulin",
+  "unit": "ng/mL",
+  "group": "thyroid",
+  "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)"
+ },
+ {
+  "id": "apob",
+  "name": "Apolipoprotein B (ApoB)",
+  "unit": "mg/dL",
+  "group": "cardiometabolic",
+  "source": "NHANES 2011-2016 (APOB_G/H/I, pooled)"
+ },
+ {
+  "id": "lpa",
+  "name": "Lipoprotein(a) [Lp(a)]",
+  "unit": "mg/dL",
+  "group": "cardiometabolic",
+  "source": "NHANES III Phase 2, 1991-1994 (lab.dat, LPP) -- OLD DATA"
+ },
+ {
+  "id": "insulin",
+  "name": "Insulin (fasting)",
+  "unit": "uIU/mL",
+  "group": "cardiometabolic",
+  "source": "NHANES 2021-2023 (INS_L)"
+ },
+ {
+  "id": "ldl_c",
+  "name": "LDL cholesterol (Martin-Hopkins)",
+  "unit": "mg/dL",
+  "group": "cardiometabolic",
+  "source": "NHANES 2021-2023 (TRIGLY_L)"
+ },
+ {
+  "id": "hdl_c",
+  "name": "HDL cholesterol",
+  "unit": "mg/dL",
+  "group": "cardiometabolic",
+  "source": "NHANES 2021-2023 (HDL_L)"
+ },
+ {
+  "id": "triglycerides",
+  "name": "Triglycerides (fasting)",
+  "unit": "mg/dL",
+  "group": "cardiometabolic",
+  "source": "NHANES 2021-2023 (TRIGLY_L)"
+ },
+ {
+  "id": "glucose_fasting",
+  "name": "Glucose (fasting)",
+  "unit": "mg/dL",
+  "group": "cardiometabolic",
+  "source": "NHANES 2021-2023 (GLU_L)"
+ },
+ {
+  "id": "hba1c",
+  "name": "Hemoglobin A1c",
+  "unit": "%",
+  "group": "cardiometabolic",
+  "source": "NHANES 2021-2023 (GHB_L)"
+ },
+ {
+  "id": "ferritin",
+  "name": "Ferritin",
+  "unit": "ng/mL",
+  "group": "iron",
+  "source": "NHANES 2017-March 2020 pre-pandemic (P_FERTIN); 2021-2023 measured ferritin only in females 1-49"
+ },
+ {
+  "id": "iron",
+  "name": "Serum iron",
+  "unit": "ug/dL",
+  "group": "iron",
+  "source": "NHANES 2017-March 2020 pre-pandemic (P_FETIB); not measured for all adults in 2021-2023"
+ },
+ {
+  "id": "tibc",
+  "name": "Total iron-binding capacity (TIBC)",
+  "unit": "ug/dL",
+  "group": "iron",
+  "source": "NHANES 2017-March 2020 pre-pandemic (P_FETIB); not measured for all adults in 2021-2023"
+ },
+ {
+  "id": "transferrin_sat",
+  "name": "Transferrin saturation",
+  "unit": "%",
+  "group": "iron",
+  "source": "NHANES 2017-March 2020 pre-pandemic (P_FETIB); not measured for all adults in 2021-2023"
+ }
+]

@@ -1,0 +1,22 @@
+{
+  "id": "tpo_antibodies",
+  "name": "TPO antibodies (thyroid peroxidase antibodies)",
+  "group": "thyroid",
+  "summary": "Autoantibodies against thyroid peroxidase, an enzyme needed to make thyroid hormone; a positive result indicates autoimmune thyroid disease, usually Hashimoto's thyroiditis.",
+  "why_it_matters": "TPO antibodies identify the most common cause of hypothyroidism in iodine-sufficient countries and help predict who with a mildly raised TSH will progress to overt hypothyroidism. Positivity is common (about one in ten adults, more in women), and many positive people keep normal thyroid function for years, so a positive result is a risk marker, not a diagnosis.",
+  "ref_range": {
+    "unit": "IU/mL",
+    "male": [
+      0,
+      34
+    ],
+    "female": [
+      0,
+      34
+    ],
+    "source": "Roche Elecsys anti-TPO cutoff (<34 IU/mL); other platforms use different cutoffs, e.g. <9 or <35",
+    "note": "Cutoffs are assay-specific; results are best read as negative or positive. IU/mL = kIU/L."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nThyroid peroxidase is the enzyme that iodinates thyroglobulin to make T4 and T3. Antibodies against it reflect autoimmune attack on the thyroid. They are found in about 90% of people with Hashimoto's thyroiditis and in most people with Graves' disease, as well as in some people with normal thyroid function. The level marks autoimmunity; it does not measure how well the thyroid is working.\n\n## Why it matters\n\n- **Prevalence.** In NHANES III about 11% of the US population was TPO-antibody positive, more often women and older adults and less often Black Americans (Hollowell 2002).\n- **Progression risk.** In the 20-year Whickham follow-up (Vanderpump 1995), women with positive thyroid antibodies alone developed overt hypothyroidism at about 2% per year, those with raised TSH alone about 3% per year, and those with both about 4% per year.\n- **Pregnancy.** Positivity is associated with miscarriage, preterm birth and postpartum thyroiditis, but the TABLET trial (Dhillon-Smith 2019) found levothyroxine did not improve live births in euthyroid TPO-positive women.\n\n## How to read it\n\nUnits: IU/mL (equivalent to kIU/L). The positivity cutoff is **assay-specific** (for example under about 9, 34 or 35 IU/mL), and numbers from different labs are not interchangeable. Read the result as negative or positive and roughly how far above the cutoff; higher titers generally carry higher risk. No sex-specific range; women are simply positive more often. Population distributions (NHANES 2007-2012) are heavily right-skewed, so whether you are above the cutoff matters more than your percentile. There is no \"optimal\" level.\n\n## Causes of high\n\nHashimoto's thyroiditis, Graves' disease, postpartum thyroiditis, other autoimmune diseases (type 1 diabetes, celiac disease, vitiligo, pernicious anemia), Down and Turner syndromes, high iodine intake at the population level, and drugs that trigger thyroid autoimmunity (immune checkpoint inhibitors, interferon-alpha, amiodarone, alemtuzumab).\n\n## Causes of low\n\nA negative result is the norm. Titers fall during pregnancy and may decline slowly over years or after thyroidectomy or radioiodine; a minority of people with Hashimoto's are antibody-negative.\n\n## What moves it\n\n- **Age and sex:** positivity rises with age and is several times more common in women.\n- **Pregnancy:** titers usually fall and can rebound postpartum.\n- **Selenium:** some trials found selenium lowers titers, but evidence that this improves outcomes is weak and inconsistent (Cochrane review, van Zuuren 2013).\n- **Treatment:** levothyroxine treats the hormone deficit but does not reliably clear antibodies. Titers are fairly stable, so repeat testing is rarely informative.\n- **Assay:** biotin can interfere with some TPO immunoassays.\n\n## What to test alongside\n\nTSH and free T4 (current thyroid function), thyroglobulin antibodies (another autoimmune marker that also interferes with thyroglobulin measurement), TSH-receptor antibodies for Graves', and thyroid ultrasound when clinically indicated.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "hba1c",
+  "name": "Hemoglobin A1c (HbA1c)",
+  "group": "cardiometabolic",
+  "summary": "The percentage of hemoglobin in red cells that has glucose attached. It reflects average blood sugar over roughly the past two to three months.",
+  "why_it_matters": "HbA1c is used to diagnose diabetes and prediabetes and to track glucose control, and it does not need fasting. Higher values predict diabetes, kidney, eye and nerve complications, and cardiovascular disease. It is indirect, though: anything that changes how long red cells survive changes HbA1c independently of glucose.",
+  "ref_range": {
+    "unit": "%",
+    "male": [
+      4.8,
+      5.6
+    ],
+    "female": [
+      4.8,
+      5.6
+    ],
+    "source": "Typical US lab range (e.g. Labcorp 4.8-5.6%); ADA: <5.7% normal",
+    "note": "ADA: 5.7-6.4% (39-47 mmol/mol) prediabetes; >=6.5% (48 mmol/mol) diabetes, confirmed on repeat. Some labs report only an upper limit of <5.7%."
+  },
+  "optimal": {
+    "unit": "%",
+    "male": [
+      4.0,
+      5.6
+    ],
+    "female": [
+      4.0,
+      5.6
+    ],
+    "source": "ADA Standards of Care 2025 (<5.7% normal)",
+    "rationale": "Below 5.7% is the ADA normal range; the 4.0% lower bound is pragmatic, since very low values usually reflect shortened red-cell survival rather than better metabolic health."
+  },
+  "deep": "## What it is\n\nGlucose attaches slowly and irreversibly to hemoglobin inside red blood cells. The fraction glycated (HbA1c) depends on average glucose and on how long the cells have been circulating, about 120 days. Because older cells are continually removed, HbA1c is weighted toward recent weeks: roughly half reflects the last 30 days. Assays in the US are standardized through the NGSP to the DCCT trial scale.\n\n## Why it matters\n\n- **Diagnosis (ADA Standards of Care 2025):** below 5.7% normal; 5.7-6.4% prediabetes; 6.5% or higher diabetes, confirmed by repeat or a second test.\n- **Prediction:** in the ARIC cohort, HbA1c predicted diabetes, coronary disease, stroke and death in people without diabetes, more strongly than fasting glucose did (Selvin 2010). Risk of diabetes rises steeply across 5.7-6.4%.\n- **Complications:** in diabetes, lower HbA1c reduces eye, kidney and nerve complications (DCCT 1993, UKPDS 1998). Very aggressive lowering in older people with type 2 diabetes and heart disease increased mortality in ACCORD (2008), which is why treatment targets are usually around 7% rather than the normal range.\n\n## How to read it\n\nUnits: % (NGSP/DCCT) in the US; mmol/mol (IFCC) elsewhere. mmol/mol = 10.93 x (% - 2.15); so 5.7% = 39, 6.5% = 48, 7.0% = 53 mmol/mol.\n\n- Estimated average glucose (mg/dL) = 28.7 x HbA1c - 46.7 (ADAG study, Nathan 2008); 5.7% is about 117 mg/dL, 6.5% about 140 mg/dL. Individuals scatter widely around this line.\n- No fasting needed; NHANES measures HbA1c in participants aged 12 and older, so the population chart is broad-based. The US adult distribution centres near 5.4-5.6%, with the upper tail reaching into the prediabetes and diabetes ranges.\n- HbA1c and fasting glucose often disagree; each catches people the other misses.\n\n## Causes of high\n\nDiabetes and prediabetes; anything that lengthens red-cell lifespan or shifts cell age older: iron-deficiency anaemia, B12 or folate deficiency, after splenectomy; some hemoglobin variants or assay interference; heavy alcohol use; carbamylated hemoglobin in uraemia with some methods; older age.\n\n## Causes of low\n\nShortened red-cell survival: haemolytic anaemia, recent blood loss or transfusion, sickle cell disease, treatment of iron or B12 deficiency (a wave of new cells), erythropoietin treatment; chronic kidney disease and dialysis (often unreliable); advanced liver disease; pregnancy (falls in the first two trimesters); high-dose vitamin C or E with some assays; dapsone; some hemoglobin variants depending on the method. Genuinely low glucose (e.g. from insulin overtreatment) also lowers it.\n\n## What moves it\n\nRises slowly with age, about 0.1% per decade, independent of glucose. Hemoglobin variants (HbS, HbC, HbE, HbD, raised HbF) can interfere with specific methods; NGSP lists which assays are affected. Racial differences are debated: Black Americans average about 0.3-0.4% higher HbA1c than White Americans at similar measured glucose, and it is not settled how much reflects glycation biology, red-cell turnover or differences in actual glycaemia. Between-person differences in glycation at the same glucose (\"glycation gap\") are real but poorly understood. It is not affected by a single meal, exercise or time of day.\n\n## What to test alongside\n\nFasting glucose (and an oral glucose tolerance test or continuous glucose monitoring if results conflict), complete blood count, reticulocytes and ferritin when anaemia or iron deficiency is possible, kidney function, fasting insulin, and lipids.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

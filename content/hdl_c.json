@@ -1,0 +1,22 @@
+{
+  "id": "hdl_c",
+  "name": "HDL cholesterol (HDL-C)",
+  "group": "cardiometabolic",
+  "summary": "The cholesterol carried in high-density lipoprotein particles. Low HDL-C marks higher cardiovascular risk, but raising it has not been shown to help.",
+  "why_it_matters": "Low HDL-C is one of the most consistent markers of cardiovascular risk and is part of the metabolic syndrome definition. But it seems to be a marker rather than a cause: genetic studies and drug trials that raised HDL-C did not reduce heart disease, and very high HDL-C is associated with higher, not lower, mortality. It is most useful as a clue to insulin resistance and as an input to risk calculators.",
+  "ref_range": {
+    "unit": "mg/dL",
+    "male": [
+      40,
+      null
+    ],
+    "female": [
+      50,
+      null
+    ],
+    "source": "NCEP ATP III / metabolic syndrome criteria; typical US lab flags",
+    "note": "Many labs use >=40 for both sexes or >=60 as 'high'; >60 mg/dL was historically called a negative risk factor."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nHDL particles are small, protein-rich lipoproteins (main protein apoA-I) made by the liver and intestine. They pick up cholesterol from tissues and other lipoproteins and take part in reverse cholesterol transport back to the liver. HDL-C measures the cholesterol mass in these particles, not their number or how well they function, and HDL particles differ widely in size and composition.\n\n## Why it matters\n\nIn observational studies, low HDL-C predicts heart disease independently of LDL-C: in the Emerging Risk Factors Collaboration (2009), roughly 22% lower coronary risk per 1 standard deviation (about 15 mg/dL) higher HDL-C after adjustment. But the evidence that HDL itself is protective has largely collapsed:\n\n- **Genetics.** A variant in LIPG that raises HDL-C did not lower heart-attack risk, and a genetic score for HDL-C showed no causal link (Mendelian randomization, Voight 2012).\n- **Drug trials.** Niacin added to statins did not reduce events (AIM-HIGH 2011, HPS2-THRIVE 2014). CETP inhibitors raised HDL-C dramatically; torcetrapib caused harm, dalcetrapib and evacetrapib showed no benefit, and anacetrapib's modest benefit (REVEAL 2017) was attributed to its lowering of non-HDL cholesterol.\n- **Very high HDL-C.** In Copenhagen cohorts, all-cause mortality was U-shaped, with higher mortality at very high HDL-C (in men roughly 97 mg/dL and above; the threshold appeared higher in women, and the exact cut-points are uncertain) (Madsen 2017).\n\nThe current reading is that low HDL-C mostly flags the metabolic state (insulin resistance, high triglycerides, excess weight) that travels with it.\n\n## How to read it\n\nUnits: mg/dL in the US; divide by 38.67 for mmol/L.\n\n- Below 40 mg/dL in men or 50 mg/dL in women counts toward metabolic syndrome (ATP III, harmonized 2009 definition).\n- Women average about 10-15 mg/dL higher than men; US adult means are roughly 48 mg/dL for men and 60 mg/dL for women.\n- Being high on the NHANES distribution is not a goal in itself; there is no evidence-based optimal band, and very high values are not reassuring.\n\n## Causes of high\n\nGenetic variants (CETP deficiency, hepatic lipase or LIPG variants); regular alcohol intake; estrogen therapy; vigorous endurance exercise; being lean; primary biliary cholangitis; some drugs (niacin, fibrates modestly, CETP inhibitors).\n\n## Causes of low\n\nInsulin resistance, type 2 diabetes and metabolic syndrome; high triglycerides; obesity; smoking; physical inactivity; very-low-fat high-carbohydrate diets; anabolic steroids and testosterone; progestins; some beta-blockers; acute illness and inflammation; chronic kidney and liver disease; rare genetic disorders (Tangier disease, LCAT deficiency, apoA-I mutations).\n\n## What moves it\n\nFairly stable within a person (biological variation around 5-10%). Falls during acute infection, surgery or inflammation and recovers afterwards. Rises with alcohol and with exercise training by a few mg/dL; falls with smoking and weight gain. Little affected by fasting. Very high triglycerides can interfere with some direct HDL assays.\n\n## What to test alongside\n\nTriglycerides (the TG/HDL-C ratio is a rough marker of insulin resistance), LDL-C, non-HDL-C and apoB, fasting glucose, insulin and HbA1c, waist circumference and liver enzymes.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

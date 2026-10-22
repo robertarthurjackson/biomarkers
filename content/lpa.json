@@ -1,0 +1,34 @@
+{
+  "id": "lpa",
+  "name": "Lipoprotein(a) [Lp(a)]",
+  "group": "cardiometabolic",
+  "summary": "An LDL-like particle with an extra protein, apolipoprotein(a), attached; its level is mostly set by genes and stays roughly constant through life, so one measurement is usually enough.",
+  "why_it_matters": "High Lp(a) is an inherited, independent risk factor for heart attack, stroke and aortic valve stenosis, and it is common: roughly one in five people have a level considered elevated. Because it is mostly genetic and changes little after early childhood, one measurement is usually enough. Lifestyle barely moves it, and drugs designed specifically to lower it have not yet shown fewer heart attacks or strokes: the first outcome trial (pelacarsen, Lp(a)HORIZON, Sept 2026) missed its primary endpoint, and others (e.g. olpasiran) are still running.",
+  "ref_range": {
+    "unit": "nmol/L",
+    "male": [
+      0,
+      125
+    ],
+    "female": [
+      0,
+      125
+    ],
+    "source": "2018 ACC/AHA risk-enhancer threshold (>=125 nmol/L or >=50 mg/dL); EAS 2022 consensus",
+    "note": "nmol/L and mg/dL do not convert reliably (particle mass depends on apo(a) isoform size). Population distributions for Lp(a) come from NHANES III (1988-1994), measured in mg/dL with an assay predating current standardization."
+  },
+  "optimal": {
+    "unit": "nmol/L",
+    "male": [
+      0,
+      75
+    ],
+    "female": [
+      0,
+      75
+    ],
+    "source": "European Atherosclerosis Society consensus statement (Kronenberg 2022)",
+    "rationale": "EAS 2022 treats values below about 75 nmol/L (30 mg/dL) as ruling out Lp(a)-related excess risk; risk rises continuously above that."
+  },
+  "deep": "## What it is\n\nLp(a) is an LDL particle (one apoB molecule plus cholesterol and other lipids) with a large glycoprotein, apolipoprotein(a), covalently linked to it. Apo(a) contains a variable number of repeated \"kringle IV type 2\" domains encoded by the *LPA* gene. People with fewer repeats make smaller apo(a) isoforms, which the liver secretes more efficiently, so they tend to have higher levels. Genetics, mainly at the *LPA* locus, explains most of the variation between people (estimates commonly 70-90% or more). Levels reach adult values in early childhood and stay roughly stable for life, which is why **a single measurement is usually enough**.\n\n## Why it matters\n\n- **Causal for cardiovascular disease.** Mendelian randomization in Copenhagen cohorts (Kamstrup 2009) showed genetically raised Lp(a) increases myocardial infarction risk. In observational data, people above the 95th percentile had roughly 2-4 times the MI risk of those with the lowest levels.\n- **Magnitude per unit.** A Mendelian randomization analysis (Burgess 2018) estimated Lp(a) would need to fall by about 100 mg/dL to match the coronary benefit of lowering LDL-C by 1 mmol/L (about 39 mg/dL), so benefit is expected mainly with high levels and large reductions.\n- **Aortic valve.** *LPA* variants are associated with aortic valve calcification and stenosis (Thanassoulis 2013).\n- **Guidelines.** The EAS 2022 consensus (Kronenberg 2022) recommends measuring Lp(a) at least once in every adult; the 2018 ACC/AHA guideline lists 50 mg/dL (about 125 nmol/L) or higher as a risk enhancer.\n\n## How to read it\n\nUnits: **nmol/L** (number of particles) or **mg/dL** (mass of the whole particle). These **do not convert cleanly**, because each particle's mass depends on its apo(a) isoform. Factors of roughly 2-2.5 nmol/L per mg/dL are sometimes used but can be badly wrong for an individual. Prefer isoform-insensitive nmol/L assays calibrated to the WHO/IFCC reference material, and compare results only within one unit. No sex-specific ranges.\n\n- EAS 2022 suggested thresholds: below about **75 nmol/L (30 mg/dL)** rules out Lp(a)-related risk; above about **125 nmol/L (50 mg/dL)** rules it in; in between is a grey zone. Risk is continuous, so these are conventions.\n- The distribution is strongly right-skewed and differs by ancestry: people of African ancestry have markedly higher median levels than those of European or East Asian ancestry; whether risk per unit is the same across groups is still being studied.\n- **Data caveat:** NHANES population data for Lp(a) are old, from **NHANES III (1988-1994)**, measured in mg/dL with an assay that predates current standardization. The genetics have not changed, but treat percentile placement as approximate, especially for nmol/L results.\n\n## Causes of high\n\nMainly inherited (small apo(a) isoforms and other *LPA* variants). Secondary rises occur with chronic kidney disease and nephrotic syndrome, hypothyroidism, menopause, pregnancy, and growth hormone therapy; statins may raise it slightly.\n\n## Causes of low\n\nMainly inherited (large isoforms or null alleles). Also severe liver disease, hyperthyroidism, and therapies: PCSK9 inhibitors (about 20-30% lower), niacin and hormone therapy (lower, but without proven outcome benefit from that effect), lipoprotein apheresis, and investigational Lp(a)-specific antisense and siRNA drugs (pelacarsen, olpasiran, lepodisiran), which lower it by 80% or more. In September 2026 the first outcome trial, Lp(a)HORIZON (pelacarsen, 8,323 patients with heart disease), lowered Lp(a) but did not significantly reduce major cardiovascular events (Novartis topline, full data pending). Trials of other agents such as olpasiran are still running, so whether lowering Lp(a) itself cuts risk remains unproven.\n\n## What moves it\n\nVery little. Diet, exercise and weight loss change it only slightly. Fasting does not matter. Acute inflammation can raise it modestly, so avoid testing during illness. Assay differences (calibration, isoform sensitivity, mg/dL vs nmol/L) cause more variation between labs than biology does within a person. Repeat testing is worthwhile mainly if the first result was near a threshold, was taken during illness, or before and after a specific therapy.\n\n## What to test alongside\n\nApoB and LDL-C (Lp(a) particles count toward apoB; overall risk depends on both), family history of premature cardiovascular disease (and cascade testing of relatives if high), hs-CRP, and coronary artery calcium scoring. Managing high Lp(a) today mainly means tighter control of other risk factors, especially LDL-C and blood pressure.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

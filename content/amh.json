@@ -1,0 +1,22 @@
+{
+  "id": "amh",
+  "name": "AMH (anti-Mullerian hormone)",
+  "group": "sex_hormones",
+  "summary": "A hormone made by small growing ovarian follicles that reflects how many follicles remain (ovarian reserve); it falls steadily with age and is high in polycystic ovary syndrome.",
+  "why_it_matters": "AMH is the most practical blood marker of ovarian reserve and predicts how many eggs IVF stimulation is likely to yield. It does not measure egg quality and does not predict natural fertility well in women trying to conceive, so a low value is not a verdict on the ability to get pregnant. In men it reflects Sertoli cell function and is mainly used in children.",
+  "ref_range": {
+    "unit": "ng/mL",
+    "male": [
+      0.8,
+      14.5
+    ],
+    "female": [
+      1.0,
+      3.5
+    ],
+    "source": "Approximate values; female band is a commonly cited range for normal ovarian reserve in women in their 30s, male interval approximate Roche Elecsys adult range",
+    "note": "Strongly age-dependent in women: median roughly 3-4 ng/mL in the mid-20s, falling toward undetectable around menopause. Values above ~4 ng/mL are common in PCOS. Assays are not fully interchangeable. ng/mL x 7.14 = pmol/L."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nAnti-Mullerian hormone is a glycoprotein of the TGF-beta family. In women it is secreted by granulosa cells of preantral and small antral follicles, so its level tracks the number of follicles in the growing pool, an indirect marker of the remaining primordial follicle supply. In male fetuses Sertoli cells make large amounts of AMH, which regresses the Mullerian ducts; levels stay high in boys and fall at puberty.\n\n## Why it matters\n\n- **IVF response.** AMH predicts the number of eggs retrieved with ovarian stimulation and the risk of over-response (ovarian hyperstimulation), and is used to choose doses.\n- **Natural fertility.** In women aged 30-44 without known infertility, low AMH was not associated with lower chances of conceiving over 6-12 months (Steiner 2017, JAMA). AMH measures quantity, not egg quality, which depends mainly on age.\n- **Menopause timing.** Lower AMH for age predicts earlier menopause on average, but individual prediction intervals are wide.\n- **PCOS.** The 2023 International PCOS guideline allows raised AMH as an alternative to ultrasound for polycystic ovarian morphology in adults, using assay-specific cutoffs.\n\n## How to read it\n\nUnits: ng/mL in the US (as in NHANES), pmol/L elsewhere (ng/mL x 7.14 = pmol/L).\n\n- **Women:** strongly age-dependent; in the 30s a range of roughly **1.0-3.5 ng/mL** is often described as typical reserve, below about 1.0 as reduced, and values above about 4 are common in PCOS. Compare against age-specific percentiles.\n- **Men:** roughly 0.8-14.5 ng/mL in adults; rarely used clinically.\n\nNHANES 2021-2023 measured AMH in both sexes from age 6, so age-matched percentiles are the most informative view. Many values in older women are below the detection limit. There is no \"optimal\" AMH.\n\n## Causes of high\n\nPCOS (more small follicles), younger age, granulosa cell tumors (rare; AMH is used as a tumor marker), and in boys normal childhood physiology.\n\n## Causes of low\n\nAge, primary ovarian insufficiency, ovarian surgery (including endometrioma removal), chemotherapy and pelvic radiation, smoking, hormonal contraception (lowers AMH by roughly 20-30%, reversibly), GnRH analogs, and in men testicular failure.\n\n## What moves it\n\n- **Cycle day:** varies relatively little across the cycle, so it can be measured on any day, although some within-cycle fluctuation exists.\n- **Hormonal contraception:** testing after a few months off gives a truer baseline.\n- **Assay:** different platforms (Beckman, Roche, others) give systematically different values; cutoffs are assay-specific and early assays had stability problems. A WHO international standard was established only recently. Biotin can falsely *lower* results on some sandwich assays.\n\n## What to test alongside\n\nFSH and estradiol on cycle days 2-4, antral follicle count by ultrasound, and for suspected PCOS total testosterone, SHBG, LH and fasting insulin or glucose.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

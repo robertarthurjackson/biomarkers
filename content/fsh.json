@@ -1,0 +1,22 @@
+{
+  "id": "fsh",
+  "name": "FSH (follicle-stimulating hormone)",
+  "group": "sex_hormones",
+  "summary": "A pituitary hormone that drives ovarian follicle growth in women and sperm production in men; high levels signal failing ovarian or testicular feedback, as at menopause.",
+  "why_it_matters": "FSH rises when the ovaries or testes stop producing their feedback signals (inhibin B and sex steroids), so it is a marker of menopause, ovarian insufficiency and impaired sperm production. It is noisy through the perimenopause and a weaker marker of ovarian reserve than AMH.",
+  "ref_range": {
+    "unit": "mIU/mL",
+    "male": [
+      1.5,
+      12.4
+    ],
+    "female": [
+      3.5,
+      12.5
+    ],
+    "source": "Approximate Roche Elecsys adult intervals (vary by assay)",
+    "note": "Female range shown is follicular phase. Mid-cycle ~4.7-21.5; luteal ~1.7-7.7; postmenopausal ~26-135 mIU/mL. mIU/mL = IU/L."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nFollicle-stimulating hormone is a pituitary glycoprotein released under GnRH control. In women it recruits and grows ovarian follicles and stimulates estradiol production by granulosa cells; inhibin B and estradiol from those follicles suppress it. In men it acts on Sertoli cells to support sperm production; inhibin B from Sertoli cells is the main feedback signal.\n\n## Why it matters\n\n- **Menopause and ovarian insufficiency.** FSH rises as follicle numbers fall. Persistently high FSH with amenorrhea before age 40 indicates primary ovarian insufficiency. During the perimenopause FSH fluctuates widely, so NICE (2015 menopause guideline) advises against using FSH to diagnose menopause in symptomatic women over 45.\n- **Ovarian reserve.** Early-follicular (cycle day 2-4) FSH above roughly 10-12 mIU/mL suggests reduced reserve, but AMH and antral follicle count are more reliable and less variable.\n- **Male fertility.** High FSH in a man with low sperm count indicates impaired spermatogenesis (primary testicular dysfunction).\n\n## How to read it\n\nUnits: mIU/mL, equivalent to IU/L.\n\n- **Men:** about **1.5-12.4 mIU/mL**, rising with age.\n- **Women:** follicular about 3.5-12.5, mid-cycle about 4.7-21.5, luteal about 1.7-7.7, postmenopausal about 26-135 mIU/mL.\n\nNHANES 2021-2023 measured FSH across sexes and ages; female percentiles mix cycle phases and menopausal status. Read FSH with estradiol: a \"normal\" early-follicular FSH can be falsely reassuring if estradiol is already high and suppressing it. There is no \"optimal\" FSH.\n\n## Causes of high\n\nMenopause, primary ovarian insufficiency (autoimmune, genetic, after chemotherapy, radiation or ovarian surgery), Turner syndrome, primary testicular failure (Klinefelter syndrome, chemotherapy, radiation, mumps orchitis, undescended testes), and rarely FSH-secreting pituitary adenomas.\n\n## Causes of low\n\nHormonal contraceptives, pregnancy, testosterone therapy and anabolic steroids, GnRH analogs, high prolactin, pituitary or hypothalamic disease, functional hypothalamic amenorrhea (low energy availability, heavy exercise, stress), opioids, severe illness, Kallmann syndrome, and high estradiol (for example from an ovarian cyst).\n\n## What moves it\n\n- **Cycle day:** test on days 2-4 when assessing reserve.\n- **Perimenopause:** month-to-month swings can span from premenopausal to postmenopausal values.\n- **Age:** rises gradually in men and steeply in women around menopause.\n- **Pulsatility:** less pronounced than LH but still present.\n- **Assay:** manufacturer differences are modest; biotin can falsely *lower* results on some sandwich immunoassays.\n\n## What to test alongside\n\nEstradiol (always, in women), AMH, LH, prolactin and TSH for irregular cycles; in men total testosterone, LH and semen analysis.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

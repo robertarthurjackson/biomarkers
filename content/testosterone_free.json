@@ -1,0 +1,22 @@
+{
+  "id": "testosterone_free",
+  "name": "Testosterone (free)",
+  "group": "sex_hormones",
+  "summary": "The small fraction of testosterone (roughly 1-3%) not bound to SHBG or albumin, usually calculated from total testosterone, SHBG and albumin rather than measured directly.",
+  "why_it_matters": "Free testosterone reflects androgen exposure better than total testosterone when SHBG is unusually high or low, which is common with aging, obesity, insulin resistance, liver or thyroid disease and some medications. It is most useful when total testosterone is borderline. The method used, calculation versus dialysis versus direct immunoassay, changes the answer substantially.",
+  "ref_range": {
+    "unit": "pg/mL",
+    "male": [
+      46,
+      224
+    ],
+    "female": [
+      0.2,
+      5.0
+    ],
+    "source": "Approximate equilibrium-dialysis reference intervals from large US reference labs; method-dependent",
+    "note": "Direct analog immunoassays give much lower numbers and are not comparable. pg/mL x 3.47 = pmol/L."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nMost circulating testosterone is bound: about 40-50% tightly to sex hormone-binding globulin (SHBG) and most of the rest loosely to albumin. Only about 1-3% is unbound. The \"free hormone hypothesis\" holds that the unbound fraction is what enters cells; \"bioavailable testosterone\" adds the albumin-bound fraction, which dissociates readily in tissue capillaries. The hypothesis is widely used but not proven for every tissue.\n\n## Why it matters\n\nWhen SHBG is low (obesity, insulin resistance), total testosterone can look low while free testosterone is normal; when SHBG is high (aging, hyperthyroidism, liver disease), total can look normal while free is low. The Endocrine Society 2018 guideline recommends free testosterone in these situations and when total is near the lower limit. In the European Male Ageing Study (Wu 2010), late-onset hypogonadism was best defined by three sexual symptoms plus total testosterone below 11 nmol/L (about 320 ng/dL) and free testosterone below 220 pmol/L (about 64 pg/mL). Outcome data are thinner than for total testosterone.\n\n## How to read it\n\nUnits: pg/mL, ng/dL or pmol/L (pg/mL x 3.47 = pmol/L; ng/dL x 10 = pg/mL).\n\n- **Methods:** equilibrium dialysis with LC-MS/MS is the reference. Calculated free testosterone (Vermeulen 1999 equation, from total T, SHBG and albumin) is the practical standard and tracks dialysis well, though it tends to read somewhat higher. Other equations (e.g. Zakharov 2015) give different numbers, and there is no consensus on the best. Direct analog immunoassays are inaccurate and the Endocrine Society advises against them.\n- **Men:** lower limits typically fall around 50-70 pg/mL; a Framingham-based 2.5th percentile for calculated free T was about 70 pg/mL (Bhasin 2011).\n- **Women:** roughly 0.2-5 pg/mL, highly method-dependent.\n\nNHANES does not measure free testosterone. Population values are calculated from measured total testosterone, SHBG and albumin, so they inherit the equation's assumptions; compare your value only if it was derived the same way.\n\n## Causes of high\n\nTestosterone therapy or anabolic steroids; in women PCOS, non-classic congenital adrenal hyperplasia and androgen-secreting tumors; low SHBG (obesity, insulin resistance, hypothyroidism, androgen use) can push free testosterone up even when total is ordinary.\n\n## Causes of low\n\nThe same primary and secondary causes that lower total testosterone (testicular damage, obesity, opioids, glucocorticoids, high prolactin, pituitary disease, illness, energy deficiency), plus high SHBG from aging, hyperthyroidism, liver cirrhosis, HIV, anticonvulsants or oral estrogen.\n\n## What moves it\n\nEverything that moves total testosterone (time of day, fasting, sleep, illness, weight) plus everything that moves SHBG. Age lowers free testosterone faster than total, because SHBG rises with age. Very low albumin distorts the calculation. Biotin can affect the underlying immunoassays on some platforms.\n\n## What to test alongside\n\nTotal testosterone, SHBG and albumin (the inputs), LH and FSH, estradiol, prolactin if low, and fasting insulin, glucose or HbA1c, since insulin resistance drives SHBG down.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

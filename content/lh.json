@@ -1,0 +1,22 @@
+{
+  "id": "lh",
+  "name": "LH (luteinizing hormone)",
+  "group": "sex_hormones",
+  "summary": "A pituitary hormone that drives testosterone production in the testes and triggers ovulation in women; it is read mainly to locate the cause of abnormal sex hormone levels.",
+  "why_it_matters": "LH tells you whether low sex hormones come from the gonads (LH high) or from the pituitary or hypothalamus (LH low or inappropriately normal). In women, a mid-cycle LH surge triggers ovulation and very high levels accompany menopause. It is released in pulses, so a single value is noisy.",
+  "ref_range": {
+    "unit": "mIU/mL",
+    "male": [
+      1.7,
+      8.6
+    ],
+    "female": [
+      2.4,
+      12.6
+    ],
+    "source": "Approximate Roche Elecsys adult intervals (vary by assay)",
+    "note": "Female range shown is follicular phase. Mid-cycle peak ~14-96; luteal ~1-11; postmenopausal ~8-59 mIU/mL. mIU/mL = IU/L."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nLuteinizing hormone is a glycoprotein made by the anterior pituitary in response to pulses of GnRH from the hypothalamus. In men it stimulates testosterone production by Leydig cells; testosterone and estradiol feed back to suppress it. In women it stimulates ovarian theca cells to make androgens (the substrate for estradiol), and a surge at mid-cycle triggers ovulation and formation of the corpus luteum.\n\n## Why it matters\n\n- **Classifying hypogonadism.** Low testosterone with high LH indicates primary (testicular) failure; low testosterone with low or normal LH indicates secondary (pituitary or hypothalamic) hypogonadism, which prompts different investigations such as prolactin, iron studies and pituitary imaging (Endocrine Society 2018 guideline).\n- **Ovulation and fertility.** Urine LH kits detect the surge to time conception. Serum LH helps assess amenorrhea and ovarian insufficiency.\n- **PCOS.** An elevated LH-to-FSH ratio is common in PCOS but is not part of the diagnostic criteria and is not reliable for diagnosis (International PCOS guideline 2023).\n\n## How to read it\n\nUnits: mIU/mL, equivalent to IU/L.\n\n- **Men:** about **1.7-8.6 mIU/mL**, rising modestly with age.\n- **Women:** follicular about 2.4-12.6, mid-cycle surge about 14-96, luteal about 1-11, postmenopausal about 8-59 mIU/mL.\n\nThe NHANES distribution for women mixes all cycle phases and menopausal states, so placement means little without cycle timing. Interpret LH alongside testosterone or estradiol, not in isolation. There is no \"optimal\" LH.\n\n## Causes of high\n\nPrimary testicular failure (Klinefelter syndrome, chemotherapy, radiation, orchitis, trauma), menopause and primary ovarian insufficiency, Turner syndrome, the normal mid-cycle surge, PCOS (modestly), androgen insensitivity, and rarely gonadotropin-secreting pituitary tumors.\n\n## Causes of low\n\nTestosterone therapy and anabolic steroids (strong suppression), hormonal contraceptives, GnRH analogs, opioids, glucocorticoids, high prolactin, pituitary tumors or damage, hemochromatosis, functional hypothalamic amenorrhea (low energy availability, heavy training, stress), severe illness, Kallmann syndrome, and pregnancy.\n\n## What moves it\n\n- **Pulsatility:** LH is released in pulses roughly every 1-2 hours, so single values can vary considerably; borderline results deserve a repeat.\n- **Cycle phase and menopause** dominate in women.\n- **Age:** rises gradually in men and sharply in women at menopause.\n- **Assay:** sandwich immunoassays differ between manufacturers. Biotin can falsely *lower* results on some sandwich assays.\n\n## What to test alongside\n\nTestosterone (total and free) and SHBG in men; estradiol, progesterone and FSH in women; prolactin and TSH for low-LH hypogonadism or amenorrhea; ferritin or transferrin saturation if hemochromatosis is a possibility.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

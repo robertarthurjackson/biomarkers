@@ -1,0 +1,22 @@
+{
+  "id": "estradiol",
+  "name": "Estradiol (E2)",
+  "group": "sex_hormones",
+  "summary": "The most potent natural estrogen, made mainly by the ovaries before menopause and by conversion from testosterone in men and postmenopausal women; in women it varies several-fold across the cycle.",
+  "why_it_matters": "Estradiol drives the menstrual cycle and is central to bone health in both sexes; in men it matters more for bone than testosterone itself. In women a single value only makes sense with cycle timing. At the low levels seen in men and postmenopausal women, many routine immunoassays are unreliable.",
+  "ref_range": {
+    "unit": "pg/mL",
+    "male": [
+      10,
+      40
+    ],
+    "female": [
+      20,
+      150
+    ],
+    "source": "Typical US lab ranges (approximate; vary by assay)",
+    "note": "Female range shown is follicular phase. Mid-cycle peak ~150-500 pg/mL; luteal ~60-250 pg/mL; postmenopausal (no therapy) usually <20, often <10. pg/mL x 3.67 = pmol/L."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nEstradiol (17-beta-estradiol, E2) is made from testosterone by the enzyme aromatase. Before menopause most comes from ovarian follicles under FSH and LH control. In men about 80% is formed by aromatization of testosterone in fat, muscle, bone and brain, the rest secreted by the testes. After menopause E2 comes mainly from peripheral conversion of adrenal androgens.\n\n## Why it matters\n\n- **Bone.** In men, experimentally lowering estradiol accelerated bone loss and fat gain, while testosterone mattered more for muscle (Finkelstein 2013). Low E2 in older men is associated with faster bone loss and more fractures (MrOS and other cohorts).\n- **Breast cancer.** In postmenopausal women not on hormone therapy, higher endogenous E2 is associated with roughly double the breast cancer risk in the top versus bottom fifth (Endogenous Hormones and Breast Cancer Collaborative Group 2002).\n- **Reproduction.** Used to time the cycle, monitor fertility treatment and assess ovarian function with FSH.\n\n## How to read it\n\nUnits: pg/mL in the US, pmol/L elsewhere (pg/mL x 3.67 = pmol/L).\n\n- **Men:** about **10-40 pg/mL**.\n- **Women:** follicular about 20-150, mid-cycle peak about 150-500, luteal about 60-250; postmenopausal usually below 20 pg/mL.\n\nNHANES 2021-2023 measured E2 by LC-MS/MS. Female percentiles mix all cycle phases and menopausal states, so they are broad and only loosely informative; routine immunoassay results may not compare cleanly at low concentrations. There is no evidence-based \"optimal\" E2.\n\n## Causes of high\n\n- **Women:** pre-ovulatory and luteal phases, pregnancy, ovarian stimulation for IVF, estrogen therapy, functional ovarian cysts, rarely estrogen-secreting tumors.\n- **Men:** obesity (more aromatase), testosterone therapy (especially high doses), liver cirrhosis, hyperthyroidism, rarely testicular or adrenal tumors or hCG-secreting tumors. Can cause breast tissue growth; whether moderately high E2 on therapy needs treatment is debated.\n\n## Causes of low\n\nMenopause, hormonal contraception (suppresses ovarian E2; ethinyl estradiol is not measured by most E2 assays), aromatase inhibitors, GnRH analogs, functional hypothalamic amenorrhea (energy deficiency, heavy training, stress), primary ovarian insufficiency, hyperprolactinemia, pituitary disease; in men, low testosterone of any cause.\n\n## What moves it\n\n- **Cycle phase** dominates in premenopausal women; note the cycle day when testing.\n- **Body fat** and testosterone level in men.\n- **Age:** falls sharply over the menopausal transition; changes little with age in men.\n- **Assay:** an Endocrine Society position statement (Rosner 2013) warned that direct immunoassays are inaccurate below about 20-30 pg/mL, covering most men and postmenopausal women; LC-MS/MS (\"sensitive estradiol\") is preferred there. The drug fulvestrant cross-reacts with some immunoassays. Biotin can falsely *raise* results on some competitive immunoassays.\n\n## What to test alongside\n\nTestosterone and SHBG, FSH and LH, progesterone (to confirm ovulation), prolactin, and in men on testosterone therapy hematocrit and PSA.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

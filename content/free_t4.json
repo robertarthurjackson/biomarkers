@@ -1,0 +1,22 @@
+{
+  "id": "free_t4",
+  "name": "Free T4 (free thyroxine)",
+  "group": "thyroid",
+  "summary": "The unbound fraction of thyroxine, the main hormone secreted by the thyroid; read alongside TSH to confirm and grade thyroid dysfunction.",
+  "why_it_matters": "Free T4 shows whether an abnormal TSH reflects a real change in thyroid hormone supply, and it is the key test when the pituitary may be at fault, where TSH is unreliable. With TSH it is the main dose-monitoring test for levothyroxine. Higher values even within the normal range are associated with atrial fibrillation.",
+  "ref_range": {
+    "unit": "ng/dL",
+    "male": [
+      0.8,
+      1.8
+    ],
+    "female": [
+      0.8,
+      1.8
+    ],
+    "source": "Typical US lab interval (method-specific)",
+    "note": "ng/dL x 12.87 = pmol/L. Pregnancy and some binding-protein variants distort immunoassay estimates."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nThyroxine (T4) is the main product of the thyroid gland. Over 99.9% of it in blood is bound to thyroxine-binding globulin, transthyretin and albumin; the tiny unbound fraction is the \"free\" T4 available to tissues. T4 is largely a prohormone: tissues convert it to the active hormone T3 via deiodinase enzymes.\n\n## Why it matters\n\n- **Classifying thyroid disease.** With TSH, free T4 separates overt from subclinical disease (subclinical means abnormal TSH with normal free T4) and identifies central hypothyroidism (low free T4 with low or inappropriately normal TSH).\n- **Atrial fibrillation.** In people with normal thyroid function, higher free T4 within the reference range was associated with higher AF risk, about 45% higher in the top versus bottom quartile (Thyroid Studies Collaboration, Baumgartner 2017).\n- **Treatment monitoring.** Used with TSH for levothyroxine dosing, and early in hyperthyroidism treatment, when TSH can stay suppressed for months.\n\n## How to read it\n\nUnits: ng/dL in the US, pmol/L elsewhere (ng/dL x 12.87 = pmol/L). No important sex difference outside pregnancy.\n\n- **Typical range:** about **0.8-1.8 ng/dL (10-23 pmol/L)**, with real differences between assay platforms; compare with the reporting lab's range or your own prior results from the same lab.\n\nMost labs use immunoassays that *estimate* free T4 without physically separating it; equilibrium dialysis or ultrafiltration with LC-MS/MS is the reference approach. Population percentiles (NHANES 2007-2012) reflect the NHANES assay and may not align exactly with your lab. There is no evidence-based optimal band.\n\n## Causes of high\n\nGraves' disease, toxic nodules, thyroiditis in its early (destructive) phase, excess levothyroxine or testing within a few hours after a dose, amiodarone, heparin (falsely high in the test tube), biotin interference, familial dysalbuminemic hyperthyroxinemia and other binding variants (falsely high on some assays), acute psychiatric or medical illness, and rarely TSH-secreting tumors or thyroid hormone resistance.\n\n## Causes of low\n\nPrimary hypothyroidism (Hashimoto's, after surgery or radioiodine), central hypothyroidism (pituitary or hypothalamic disease, including after pituitary surgery), severe non-thyroidal illness, drugs such as phenytoin and carbamazepine (lower measured values), late pregnancy (assay-related), and iodine deficiency.\n\n## What moves it\n\n- **Levothyroxine timing:** free T4 rises for several hours after a dose; testing before the morning dose gives more consistent results.\n- **Binding proteins:** pregnancy and estrogen raise binding proteins and complicate immunoassay estimates.\n- **Illness:** values can be low or high in hospitalized people without thyroid disease.\n- **Age:** modest changes only.\n- **Assay:** biotin falsely *raises* free T4 on competitive immunoassays (with a falsely low TSH this mimics hyperthyroidism).\n\n## What to test alongside\n\nTSH (the pair is the basic thyroid panel), free T3 for hyperthyroidism, TPO antibodies for an autoimmune cause, TSH-receptor antibodies for Graves' disease, and pituitary hormones if central hypothyroidism is suspected.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

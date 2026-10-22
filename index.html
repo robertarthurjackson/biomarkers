@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>_biomarkers</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button id="navToggle" class="nav-toggle" aria-label="Menu">&#9776;</button>
+  <a href="#/" class="logo"><span class="logo-u">_</span>biomarkers</a>
+  <nav class="topnav">
+    <a href="#/" data-nav="home">Overview</a>
+    <a href="#/dash" data-nav="dash">My Dashboard</a>
+    <a href="#/labs" data-nav="labs">My labs</a>
+  </nav>
+  <div class="topbar-right" id="profileBadge"></div>
+</header>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-search"><input id="sideFilter" type="search" placeholder="Filter charts..."></div>
+    <div id="sideGroups"></div>
+    <div class="side-foot" id="dataStatus"></div>
+  </aside>
+  <div class="maincol">
+    <main id="main" class="main"><div class="loading">Loading...</div></main>
+    <footer class="footer">Educational only, not medical advice. Population percentiles describe how common a value is, not what is healthy, and are not treatment targets. Discuss results with a clinician. Your values are stored only in this browser.</footer>
+  </div>
+</div>
+<script src="vendor/plotly.min.js"></script>
+<script src="vendor/marked.min.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "id": "triglycerides",
+  "name": "Triglycerides",
+  "group": "cardiometabolic",
+  "summary": "Fat carried in the blood, mostly in VLDL from the liver and, after meals, chylomicrons from the gut. Levels swing with recent meals, alcohol and insulin sensitivity.",
+  "why_it_matters": "Raised triglycerides mark excess triglyceride-rich particles, which carry cholesterol that contributes to atherosclerosis, and they often signal insulin resistance or fatty liver. Very high levels (above about 500-1,000 mg/dL) can cause acute pancreatitis. Triglycerides also affect how accurately LDL cholesterol can be calculated.",
+  "ref_range": {
+    "unit": "mg/dL",
+    "male": [
+      0,
+      149
+    ],
+    "female": [
+      0,
+      149
+    ],
+    "source": "NCEP ATP III; typical US lab flag (<150 mg/dL normal, fasting)",
+    "note": "ATP III: <150 normal, 150-199 borderline high, 200-499 high, >=500 very high. For non-fasting samples, EAS/EFLM (Nordestgaard 2016) flags >=175 mg/dL."
+  },
+  "optimal": {
+    "unit": "mg/dL",
+    "male": [
+      0,
+      99
+    ],
+    "female": [
+      0,
+      99
+    ],
+    "source": "AHA scientific statement on triglycerides and cardiovascular disease (Miller 2011)",
+    "rationale": "The AHA statement proposed fasting triglycerides <100 mg/dL as optimal, reflecting lower cardiometabolic risk below that level."
+  },
+  "deep": "## What it is\n\nTriglycerides are the body's main storage fat. In blood they travel inside lipoproteins: VLDL made by the liver (the dominant source when fasting) and chylomicrons made by the gut after a fatty meal. Lipoprotein lipase on blood-vessel walls breaks them down to deliver fatty acids to muscle and fat tissue. Fasting levels largely reflect how fast the liver makes VLDL, which insulin resistance, excess calories, sugar and alcohol all increase.\n\n## Why it matters\n\n- **Cardiovascular risk.** Higher triglycerides predict cardiovascular events, though much of the association weakens after adjusting for HDL-C and non-HDL-C (Emerging Risk Factors Collaboration 2009). Genetic studies support a causal role for triglyceride-rich lipoproteins, likely through their cholesterol and apoB content rather than the triglyceride itself.\n- **Treatment evidence is mixed.** Fibrates have not consistently reduced events on top of statins (PROMINENT 2022, pemafibrate, was neutral). High-dose icosapent ethyl reduced events in REDUCE-IT (2019), but the mineral-oil placebo has been debated, and a different omega-3 product was neutral in STRENGTH (2020).\n- **Pancreatitis.** Risk rises substantially above about 500 mg/dL and especially above 1,000 mg/dL.\n- **Metabolic clue.** Raised fasting triglycerides are part of the metabolic syndrome definition and commonly accompany fatty liver and prediabetes.\n\n## How to read it\n\nUnits: mg/dL in the US; divide by 88.57 for mmol/L.\n\n- ATP III: below 150 normal, 150-199 borderline high, 200-499 high, 500 or above very high. The AHA (Miller 2011) proposed below 100 mg/dL fasting as optimal.\n- Non-fasting testing is acceptable for routine screening; after a typical meal triglycerides rise by roughly 25-30 mg/dL on average (EAS/EFLM, Nordestgaard 2016), and a non-fasting value of 175 mg/dL or more is considered abnormal. Retest fasting if non-fasting TG is above about 400-440 mg/dL.\n- Distributions are right-skewed: the population median is around 100-110 mg/dL with a long upper tail. Men run higher than women before menopause.\n\n## Causes of high\n\nInsulin resistance, obesity and type 2 diabetes (especially poorly controlled); fatty liver; alcohol; high intake of refined carbohydrates and sugar; hypothyroidism; chronic kidney disease and nephrotic syndrome; pregnancy (especially third trimester); genetic conditions (familial combined hyperlipidaemia, familial chylomicronaemia syndrome); drugs including oral estrogens, glucocorticoids, beta-blockers, thiazides, retinoids, some antipsychotics, protease inhibitors, tamoxifen and bile-acid sequestrants.\n\n## Causes of low\n\nLean, insulin-sensitive physiology; low-carbohydrate diets; hyperthyroidism; malnutrition or malabsorption; drugs (fibrates, omega-3s at high dose, niacin, statins modestly); rare genetic disorders (abetalipoproteinaemia, hypobetalipoproteinaemia).\n\n## What moves it\n\nThe most variable of the lipid tests: day-to-day biological variation is around 20-25%. A large meal, alcohol in the previous day or two, and recent inactivity raise it; a recent bout of exercise lowers it. Acute illness can push it either way. Pregnancy roughly doubles it by term. Very high levels make serum milky (lipaemic) and can interfere with other tests. Glycerol kinase deficiency, a rare condition, produces falsely high readings on standard assays.\n\n## What to test alongside\n\nHDL-C, LDL-C and non-HDL-C, apoB (especially when TG is above about 150-200 mg/dL), fasting glucose, insulin and HbA1c, liver enzymes (ALT, GGT), TSH, kidney function and urine protein if very high.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

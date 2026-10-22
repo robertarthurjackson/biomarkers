@@ -1,0 +1,22 @@
+{
+  "id": "iron",
+  "name": "Serum iron",
+  "group": "iron",
+  "summary": "The amount of iron circulating in blood, almost all bound to transferrin. It swings widely from hour to hour and day to day, so on its own it says little about iron stores.",
+  "why_it_matters": "Serum iron is mainly useful as an ingredient: divided by TIBC it gives transferrin saturation, which helps distinguish iron deficiency, the anemia of inflammation and iron overload. A single serum iron value is too variable to diagnose or exclude iron deficiency, and it rises temporarily after iron-containing meals or supplements.",
+  "ref_range": {
+    "unit": "ug/dL",
+    "male": [
+      65,
+      175
+    ],
+    "female": [
+      50,
+      170
+    ],
+    "source": "Typical US lab range; ranges vary by lab (some use roughly 50-150 ug/dL)",
+    "note": "ug/dL x 0.179 = umol/L. Best drawn fasting in the morning, without iron supplements for 24 hours."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nSerum iron measures iron bound to transferrin, the blood's iron transport protein. It reflects the balance at that moment between iron entering the blood (from gut absorption and from macrophages recycling old red cells) and iron leaving it (mainly to the bone marrow for making hemoglobin). The hormone hepcidin controls the inflow: high hepcidin, as in inflammation, traps iron in cells and lowers serum iron even when stores are full.\n\n## Why it matters\n\nSerum iron alone has limited diagnostic value because it varies so much. Its main use is to calculate transferrin saturation (iron / TIBC x 100), which is central to screening for hemochromatosis and to separating iron deficiency from the anemia of inflammation. Very high serum iron is relevant in acute iron poisoning, where a level drawn about 4 hours after ingestion guides treatment.\n\n## How to read it\n\nUnits: ug/dL in the US; multiply by 0.179 for umol/L. Typical adult reference ranges are about 65-175 ug/dL in men and 50-170 ug/dL in women, but labs differ, and values just outside the range are common in healthy people.\n\n- **Within-person variability is large**, with day-to-day coefficients of variation often quoted at 20-30% or more, plus a diurnal pattern (higher in the morning, lower in the evening). That is larger than the gap between many \"normal\" and \"abnormal\" values.\n- NHANES has measured serum iron and TIBC as part of its iron-status testing in several cycles; population distributions mainly show how variable the marker is, not a healthy target. Because NHANES samples were not all drawn fasting at the same time of day, population curves are wider than any single person's true level.\n\n## Causes of high\n\nRecent iron-rich meal or iron supplement, iron injections or transfusions, hereditary hemochromatosis and other iron overload, hemolytic anemia, ineffective erythropoiesis (thalassemia, sideroblastic anemia), acute liver injury (iron released from damaged liver cells), vitamin B12 or folate deficiency (marrow is not using iron), and acute iron poisoning.\n\n## Causes of low\n\nIron deficiency (blood loss, low intake, malabsorption, pregnancy), and inflammation or infection of any kind (hepcidin-mediated, the anemia of inflammation), chronic kidney disease, cancer, and recent surgery or trauma. Low serum iron with low TIBC points toward inflammation; low iron with high TIBC points toward deficiency.\n\n## What moves it\n\n- **Time of day:** highest in the morning, falling through the afternoon and evening; night-shift workers can show reversed patterns.\n- **Meals and supplements:** an iron-containing meal or supplement can raise serum iron substantially for several hours; labs typically recommend fasting and skipping iron for at least 24 hours.\n- **Inflammation:** even a minor infection or vaccination can depress it within a day.\n- **Menstrual cycle:** tends to be lower around menstruation.\n- **Drugs:** oral contraceptives and estrogens can raise iron and TIBC; IV iron products can interfere with some assays for days.\n- **Hemolysis:** red cells contain far more iron than serum, so a hemolyzed sample reads falsely high.\n- **Assay:** colorimetric methods are fairly well standardized; differences between labs are modest compared with biological variation.\n\n## What to test alongside\n\nTIBC (or transferrin) and transferrin saturation, ferritin, CBC with MCV and RDW, CRP, and, if saturation is high, HFE genotyping and liver tests.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

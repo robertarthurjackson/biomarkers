@@ -1,0 +1,22 @@
+{
+  "id": "tibc",
+  "name": "Total iron-binding capacity (TIBC)",
+  "group": "iron",
+  "summary": "How much iron the blood's transferrin could carry if fully loaded, an indirect measure of transferrin. It rises when the body is short of iron and falls with inflammation, malnutrition and liver disease.",
+  "why_it_matters": "TIBC helps interpret serum iron. In iron deficiency the liver makes more transferrin, so TIBC goes up while saturation goes down; in the anemia of inflammation both iron and TIBC tend to be low. It is also the denominator of transferrin saturation, the main screening test for iron overload.",
+  "ref_range": {
+    "unit": "ug/dL",
+    "male": [
+      250,
+      450
+    ],
+    "female": [
+      250,
+      450
+    ],
+    "source": "Typical US lab range; varies by lab and method (some use roughly 240-450 ug/dL)",
+    "note": "ug/dL x 0.179 = umol/L. Some labs report transferrin (mg/dL) instead; TIBC (ug/dL) is roughly 1.25-1.4 x transferrin (mg/dL), and the factor depends on the method."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nTransferrin is the liver-made protein that carries iron in blood; each molecule binds up to two iron atoms. TIBC is the maximum amount of iron serum can bind, which in practice is set by the transferrin concentration. Labs either measure TIBC directly (saturating the sample with iron) or calculate it from a transferrin immunoassay. Unsaturated iron-binding capacity (UIBC) is TIBC minus serum iron.\n\n## Why it matters\n\nTIBC's value is interpretive. Iron-deficient cells signal the liver to make more transferrin, so TIBC is high in iron deficiency; inflammation suppresses transferrin, so TIBC is normal or low in the anemia of inflammation. This pattern helps when ferritin is ambiguous because of inflammation, though neither marker alone is definitive and the overlap between groups is substantial. TIBC also feeds transferrin saturation (iron / TIBC x 100).\n\n## How to read it\n\nUnits: ug/dL in the US; multiply by 0.179 for umol/L. Typical adult range is about 250-450 ug/dL, with little difference between men and women.\n\n- A high TIBC (above about 400-450) with low serum iron and low ferritin is the classic picture of iron deficiency.\n- A low TIBC (below about 250) with low serum iron suggests inflammation, chronic disease, malnutrition or protein loss.\n- TIBC varies less from day to day than serum iron (within-person variation is often quoted around 10%), but derived and directly measured TIBC are not perfectly interchangeable.\n- NHANES has measured TIBC alongside serum iron in its iron-status testing; the population distribution is useful context but values near the edges are not by themselves meaningful.\n\n## Causes of high\n\nIron deficiency (any cause), pregnancy (especially the third trimester), oral contraceptives and estrogen therapy, and acute hepatitis in some cases.\n\n## Causes of low\n\nInflammation, infection and chronic disease (anemia of inflammation), malnutrition and low protein intake, protein-losing states (nephrotic syndrome, protein-losing enteropathy), chronic liver disease and cirrhosis (reduced synthesis), cancer, and iron overload (including hemochromatosis), where transferrin production is downregulated.\n\n## What moves it\n\n- **Iron status:** rises gradually as stores deplete and falls back over weeks after repletion.\n- **Hormones:** estrogen, whether from pregnancy, oral contraceptives or hormone therapy, raises transferrin.\n- **Inflammation and nutrition:** transferrin is a negative acute-phase protein, so illness lowers it; prolonged low protein intake does too.\n- **Age:** tends to be higher in children and to fall modestly in older adults.\n- **Fasting and time of day:** small effect on TIBC itself, though the derived saturation depends heavily on the serum iron drawn with it.\n- **Assay:** direct, UIBC-based and transferrin-derived methods can give somewhat different results; compare values from the same lab where possible.\n\n## What to test alongside\n\nSerum iron and transferrin saturation (always interpreted together), ferritin, CBC, CRP, albumin (nutrition and liver synthesis), and liver tests if TIBC is unexpectedly low.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

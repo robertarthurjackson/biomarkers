@@ -1,0 +1,22 @@
+{
+  "id": "dhea_s",
+  "name": "DHEA-S (dehydroepiandrosterone sulfate)",
+  "group": "sex_hormones",
+  "summary": "An adrenal androgen precursor and the most abundant steroid in blood; it peaks in the twenties and declines steadily with age in both sexes.",
+  "why_it_matters": "DHEA-S is a stable marker of adrenal androgen output. It is mainly useful for evaluating androgen excess in women (PCOS, adrenal causes) and adrenal insufficiency. Low levels in older adults are associated with poorer health in some cohorts, but trials of DHEA supplements have shown little benefit, so a low value for age is not by itself a reason to treat.",
+  "ref_range": {
+    "unit": "ug/dL",
+    "male": [
+      120,
+      520
+    ],
+    "female": [
+      45,
+      270
+    ],
+    "source": "Approximate US lab intervals for ages 30-39 (vary by lab)",
+    "note": "Strongly age-dependent: roughly 280-640 (men) and 65-380 (women) in the 20s, falling to well under half that by the 60s-70s. Compare against an age-specific range. ug/dL x 0.0271 = umol/L."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nDehydroepiandrosterone (DHEA) is made mainly by the zona reticularis of the adrenal cortex under ACTH stimulation; most is sulfated to DHEA-S, which circulates at high concentrations with a long half-life. DHEA-S itself is weakly active; tissues convert it to androstenedione, testosterone and estrogens. In women adrenal precursors supply a meaningful share of androgens; in men the testes dominate, so DHEA-S contributes relatively little to male androgen status.\n\n## Why it matters\n\n- **Androgen excess in women.** DHEA-S is raised in a minority of women with PCOS and in non-classic congenital adrenal hyperplasia. Very high values (often quoted as above about 700 ug/dL) point toward an adrenal source, including rare adrenal tumors.\n- **Adrenal insufficiency.** Low DHEA-S for age is a supportive (not diagnostic) clue to primary or secondary adrenal insufficiency.\n- **Aging.** Low DHEA-S has been associated with higher mortality and cardiovascular events in some cohorts of older men, but findings are inconsistent and confounded by illness. A two-year randomized trial of DHEA in older adults (Nair 2006) found no meaningful benefit on body composition, physical performance or quality of life.\n\n## How to read it\n\nUnits: ug/dL in the US (as in NHANES), umol/L elsewhere (ug/dL x 0.0271 = umol/L).\n\nRanges depend heavily on age and sex: for ages 30-39 roughly **120-520 ug/dL in men** and **45-270 ug/dL in women**, higher in the twenties and much lower after 60. NHANES 2021-2023 measured DHEA-S in both sexes from childhood to 80, so age-matched percentiles are the most informative view. There is no established \"optimal\" level.\n\n## Causes of high\n\nDHEA or DHEA-S supplements (common; even 25-50 mg/day can push levels above range), PCOS, non-classic congenital adrenal hyperplasia, adrenal adenoma or carcinoma, ACTH-dependent Cushing's syndrome, and premature adrenarche in children.\n\n## Causes of low\n\nAging (\"adrenopause\"), glucocorticoid treatment (including high-dose inhaled steroids) suppressing ACTH, primary adrenal insufficiency (Addison's), hypopituitarism, severe chronic illness, opioid use, and oral contraceptives (modest decrease).\n\n## What moves it\n\n- **Age** is the dominant factor; levels fall roughly 2% per year from the late twenties.\n- **Time of day:** because of the long half-life, diurnal and day-to-day variation are small, so timing matters far less than for cortisol or testosterone.\n- **Stress and illness:** severe illness lowers it.\n- **Assay:** immunoassays and LC-MS/MS generally agree reasonably well at typical concentrations. Biotin can falsely *raise* results on some competitive immunoassays.\n\n## What to test alongside\n\nTotal testosterone and SHBG, androstenedione and 17-hydroxyprogesterone (for androgen excess in women), LH and FSH, and morning cortisol with ACTH if adrenal insufficiency is suspected.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

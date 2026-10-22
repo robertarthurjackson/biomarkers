@@ -1,0 +1,22 @@
+{
+  "id": "free_t3",
+  "name": "Free T3 (free triiodothyronine)",
+  "group": "thyroid",
+  "summary": "The unbound fraction of T3, the biologically active thyroid hormone; most T3 is made in tissues from T4 rather than secreted by the thyroid.",
+  "why_it_matters": "Free T3 is mainly useful for diagnosing and monitoring hyperthyroidism, where it can rise before or more than T4. It adds little for diagnosing hypothyroidism, and it falls in illness and with calorie restriction even when the thyroid is healthy, so a low value on its own is hard to interpret.",
+  "ref_range": {
+    "unit": "pg/mL",
+    "male": [
+      2.3,
+      4.2
+    ],
+    "female": [
+      2.3,
+      4.2
+    ],
+    "source": "Typical US lab interval (method-specific)",
+    "note": "pg/mL x 1.536 = pmol/L. Slightly higher in adolescents and young adults."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nTriiodothyronine (T3) is the hormone that binds thyroid hormone receptors in cell nuclei. Only about 20% of circulating T3 is secreted by the thyroid; the rest is made from T4 by deiodinase enzymes in liver, kidney, muscle and other tissues. Almost all T3 is protein-bound and a small free fraction is measured as free T3. Tissue T3 is regulated locally, so blood levels do not perfectly reflect what each organ sees.\n\n## Why it matters\n\n- **Hyperthyroidism.** In Graves' disease and toxic nodules T3 production rises disproportionately, and \"T3 toxicosis\" (high T3, normal T4) occurs in a minority. The American Thyroid Association 2016 hyperthyroidism guideline recommends measuring T3 with free T4 when TSH is suppressed.\n- **Hypothyroidism.** T3 is maintained by increased T4-to-T3 conversion until hypothyroidism is fairly advanced, so it is a poor diagnostic test; the ATA 2014 hypothyroidism guideline (Jonklaas 2014) does not recommend it for routine diagnosis or levothyroxine dosing.\n- **Combination therapy.** Whether some people on levothyroxine feel better with added T3 (liothyronine), possibly related to deiodinase variants such as DIO2 Thr92Ala, is unresolved; trial results are mixed.\n\n## How to read it\n\nUnits: pg/mL in the US, pmol/L elsewhere (pg/mL x 1.536 = pmol/L). No important sex difference.\n\n- **Typical range:** about **2.3-4.2 pg/mL (3.5-6.5 pmol/L)**, assay-dependent.\n- Free T3 immunoassays are generally less reliable than free T4 assays, especially when binding proteins are abnormal; some clinicians prefer total T3.\n\nPopulation percentiles (NHANES 2007-2012) are wide; there is no evidence-based \"optimal\" free T3 within the normal range.\n\n## Causes of high\n\nGraves' disease, toxic nodular goitre, early thyroiditis, T3-containing medication (liothyronine or desiccated thyroid, especially within a few hours of a dose), excess levothyroxine, pregnancy-related assay effects, and rarely thyroid hormone resistance or TSH-secreting tumors.\n\n## Causes of low\n\nNon-thyroidal illness (\"low T3 syndrome\") from acute or chronic illness, surgery or starvation, generally regarded as adaptive (treating it with T3 has not shown benefit); fasting and sustained calorie restriction (seen in trials such as CALERIE); drugs that reduce conversion (amiodarone, glucocorticoids, high-dose propranolol, iodinated contrast); and advanced hypothyroidism.\n\n## What moves it\n\n- **Energy intake:** short fasts and sustained calorie deficits lower it within days.\n- **Dose timing:** liothyronine and desiccated thyroid produce sharp peaks a few hours after a dose.\n- **Age:** tends to decline modestly with age.\n- **Illness:** falls quickly with acute illness and recovers afterwards.\n- **Assay:** biotin can falsely *raise* free T3 on competitive immunoassays.\n\n## What to test alongside\n\nTSH and free T4 (interpret T3 only alongside these), TSH-receptor antibodies for Graves', TPO antibodies, and for an unexplained low T3 a review of recent illness and energy intake. Reverse T3 is sometimes ordered but has little established clinical use.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

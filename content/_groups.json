@@ -1,0 +1,18 @@
+{
+  "sex_hormones": {
+    "name": "Sex hormones",
+    "blurb": "Gonadal, adrenal and pituitary hormones that govern reproduction, androgen and estrogen status, and ovarian reserve; most vary strongly with sex, age and, in women, cycle phase."
+  },
+  "thyroid": {
+    "name": "Thyroid",
+    "blurb": "The pituitary-thyroid axis that sets metabolic rate, read as TSH plus the free thyroid hormones it controls."
+  },
+  "cardiometabolic": {
+    "name": "Cardiometabolic",
+    "blurb": "Lipoproteins, glucose and insulin markers that track atherosclerotic risk and insulin resistance, where population averages are often well above healthy levels."
+  },
+  "iron": {
+    "name": "Iron",
+    "blurb": "Measures of iron stores and iron in transit that together distinguish deficiency, inflammation and overload."
+  }
+}

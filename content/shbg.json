@@ -1,0 +1,22 @@
+{
+  "id": "shbg",
+  "name": "SHBG (sex hormone-binding globulin)",
+  "group": "sex_hormones",
+  "summary": "A liver-made protein that binds testosterone, DHT and, more weakly, estradiol, setting how much of these hormones is free; low levels are also a sensitive sign of insulin resistance.",
+  "why_it_matters": "SHBG is needed to interpret total testosterone, and it is a metabolic signal in its own right: insulin suppresses its production, so low SHBG is a sensitive marker of insulin resistance and fatty liver and strongly predicts type 2 diabetes. High SHBG points toward estrogen exposure, hyperthyroidism, liver disease, aging or low energy intake.",
+  "ref_range": {
+    "unit": "nmol/L",
+    "male": [
+      10,
+      57
+    ],
+    "female": [
+      18,
+      144
+    ],
+    "source": "Typical US lab reference intervals for adults (vary by platform)",
+    "note": "Rises with age in men; much higher in pregnancy and on oral estrogen or combined oral contraceptives."
+  },
+  "optimal": null,
+  "deep": "## What it is\n\nSHBG is a glycoprotein secreted mainly by the liver. It binds testosterone and dihydrotestosterone with high affinity and estradiol with lower affinity, buffering their free concentrations and slowing their clearance. Hepatic production is suppressed by insulin and liver fat (through reduced HNF-4alpha activity) and stimulated by estrogens and thyroid hormone, so the level integrates several metabolic signals.\n\n## Why it matters\n\n- **Diabetes risk.** In nested case-control studies from the Women's Health Study and Physicians' Health Study II (Ding 2009), people in the highest SHBG quartile had roughly 90% lower odds of developing type 2 diabetes than those in the lowest. *SHBG* gene variants that raise SHBG were also associated with lower risk, supporting causality, though later Mendelian randomization work suggests the effect may be clearer in women than in men.\n- **Interpreting testosterone.** Abnormal SHBG makes total testosterone misleading (see Free testosterone).\n\n## How to read it\n\nUnits: nmol/L.\n\n- **Adult men:** about **10-57 nmol/L**, rising with age; older men often exceed 60.\n- **Non-pregnant women:** about **18-144 nmol/L**.\n\nSHBG immunoassays are not fully standardized, so ranges differ by platform. There is no accepted \"optimal\" SHBG, and a very high value is not automatically healthier. NHANES 2021-2023 measured SHBG in both sexes, so you can see where you sit for age and sex.\n\n## Causes of high\n\nAging, oral estrogens and combined oral contraceptives (several-fold), pregnancy, tamoxifen, hyperthyroidism, liver cirrhosis and hepatitis, HIV, anticonvulsants (phenytoin, carbamazepine), low calorie intake or anorexia, and lean, insulin-sensitive physiology.\n\n## Causes of low\n\nInsulin resistance and hyperinsulinemia, obesity, type 2 diabetes, fatty liver, PCOS, hypothyroidism, androgens and anabolic steroids, glucocorticoids, nephrotic syndrome, acromegaly, and genetic variants at the *SHBG* locus.\n\n## What moves it\n\n- **Stability:** relatively stable day to day, with little diurnal or fasting effect.\n- **Weight change:** weight loss and improved insulin sensitivity raise it over weeks to months.\n- **Age:** rises in men roughly 1-2% per year in later life.\n- **Genetics:** common variants explain a substantial share of differences between people.\n- **Assay:** biotin can falsely lower results on some sandwich immunoassays.\n\n## What to test alongside\n\nTotal and free testosterone, estradiol, fasting insulin, glucose and HbA1c, triglycerides and ALT (fatty liver), and TSH and free T4 when SHBG is unexpectedly high or low.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

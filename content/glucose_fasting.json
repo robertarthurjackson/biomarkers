@@ -1,0 +1,34 @@
+{
+  "id": "glucose_fasting",
+  "name": "Fasting glucose",
+  "group": "cardiometabolic",
+  "summary": "Blood sugar after at least 8 hours without food. It reflects how well the liver's overnight glucose output is held in check by insulin.",
+  "why_it_matters": "Fasting plasma glucose is one of the standard tests for diagnosing prediabetes and diabetes. A value of 126 mg/dL or higher, confirmed on repeat, meets the definition of diabetes. Values in the prediabetes range carry a markedly higher risk of developing diabetes and somewhat higher cardiovascular risk.",
+  "ref_range": {
+    "unit": "mg/dL",
+    "male": [
+      70,
+      99
+    ],
+    "female": [
+      70,
+      99
+    ],
+    "source": "ADA Standards of Care (normal fasting glucose <100 mg/dL); typical US lab range 65-99 or 70-99",
+    "note": "ADA: 100-125 mg/dL impaired fasting glucose (prediabetes); >=126 mg/dL diabetes (confirm with repeat or second test). WHO uses 110 mg/dL as the lower bound of impaired fasting glucose."
+  },
+  "optimal": {
+    "unit": "mg/dL",
+    "male": [
+      70,
+      99
+    ],
+    "female": [
+      70,
+      99
+    ],
+    "source": "ADA Standards of Care 2025",
+    "rationale": "ADA defines fasting glucose below 100 mg/dL as normal; the 70 mg/dL floor is the conventional threshold for hypoglycaemia rather than a risk-derived optimum."
+  },
+  "deep": "## What it is\n\nAfter an overnight fast, blood glucose comes almost entirely from the liver, through breakdown of glycogen and new glucose production. Insulin from the pancreas restrains that output and glucagon promotes it. Fasting glucose therefore reflects hepatic insulin sensitivity and the pancreas's ability to secrete enough insulin. It typically stays normal for years while insulin resistance builds, because the pancreas compensates by making more insulin; it rises when that compensation starts to fail.\n\n## Why it matters\n\n- **Diagnosis (ADA Standards of Care 2025):** below 100 mg/dL normal; 100-125 mg/dL impaired fasting glucose (prediabetes); 126 mg/dL or higher diabetes, confirmed with a repeat test or a second test such as HbA1c, unless symptoms and very high glucose make it clear.\n- **Progression:** people with impaired fasting glucose develop type 2 diabetes at several times the rate of those with normal values, and lifestyle intervention reduced progression by 58% in the Diabetes Prevention Program (2002), which enrolled people with impaired fasting glucose plus impaired glucose tolerance.\n- **Cardiovascular risk:** diabetes roughly doubles vascular risk (Emerging Risk Factors Collaboration 2010). The excess risk in the prediabetes range is smaller and less consistent.\n\n## How to read it\n\nUnits: mg/dL in the US; divide by 18 for mmol/L (100 mg/dL = 5.6 mmol/L; 126 mg/dL = 7.0 mmol/L).\n\n- A true fast of at least 8 hours is needed; a \"fasting\" sample drawn after coffee with sugar or a late snack will read high.\n- Plasma or serum glucose is what labs report; fingerstick meters and continuous monitors differ by up to 10-15%.\n- A large share of US adults (roughly a third) have fasting glucose of 100 mg/dL or more, so the upper NHANES percentiles fall inside the prediabetes range. Being \"average\" is not the same as normal.\n- Fasting glucose misses many people whose problem shows up only after meals; an oral glucose tolerance test or HbA1c can catch them.\n\n## Causes of high\n\nType 2 and type 1 diabetes; prediabetes; acute stress, infection, surgery or heart attack (stress hyperglycaemia); glucocorticoids; Cushing's syndrome, acromegaly, pheochromocytoma, hyperthyroidism; pancreatitis, pancreatic cancer, cystic fibrosis, haemochromatosis; drugs including thiazides, atypical antipsychotics, statins (small effect), some HIV drugs, tacrolimus, niacin; pregnancy (gestational diabetes); not truly fasting.\n\n## Causes of low\n\nInsulin or sulfonylurea treatment; prolonged fasting or heavy exercise; alcohol; adrenal insufficiency; severe liver or kidney failure; sepsis; insulinoma (rare); after gastric bypass (usually after meals). Genuine hypoglycaemia in someone not on diabetes drugs is uncommon and is usually confirmed by Whipple's triad. Falsely low values are common when blood is left unspun, because cells keep consuming glucose (roughly 5-7% per hour at room temperature) unless collected in a fluoride or citrate tube.\n\n## What moves it\n\nRises gradually with age. Early-morning rises from counter-regulatory hormones (the dawn phenomenon). Poor sleep, acute stress, intense exercise just before the draw, and acute illness can raise it. A very low-carbohydrate diet can modestly raise fasting values (physiological insulin resistance) while improving other markers. Day-to-day variation is about 5-6%. Delayed processing lowers it, as above.\n\n## What to test alongside\n\nHbA1c (complementary: average over months), fasting insulin and HOMA-IR, oral glucose tolerance test if borderline, lipid panel and triglycerides, liver enzymes, kidney function and urine albumin if diabetic, and blood pressure and waist circumference.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}

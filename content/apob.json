@@ -1,0 +1,33 @@
+{
+  "id": "apob",
+  "name": "Apolipoprotein B (ApoB)",
+  "group": "cardiometabolic",
+  "summary": "The main protein on LDL, VLDL, IDL and Lp(a) particles, with exactly one molecule per particle, so apoB is effectively a count of the particles that can enter artery walls and cause atherosclerosis.",
+  "why_it_matters": "Atherosclerosis is driven by apoB-containing particles getting trapped in the artery wall, and risk scales with how many particles there are and for how long. ApoB measures that number directly, so it captures risk that LDL cholesterol can miss, especially with high triglycerides, diabetes or insulin resistance. It is cheap, well standardized and does not require fasting.",
+  "ref_range": {
+    "unit": "mg/dL",
+    "male": [
+      0,
+      130
+    ],
+    "female": [
+      0,
+      130
+    ],
+    "source": "Typical US lab flag; 2018 ACC/AHA cholesterol guideline treats >=130 mg/dL as a risk enhancer"
+  },
+  "optimal": {
+    "unit": "mg/dL",
+    "male": [
+      0,
+      100
+    ],
+    "female": [
+      0,
+      100
+    ],
+    "source": "2019 ESC/EAS dyslipidaemia guideline (goals <100 moderate risk, <80 high, <65 very high)",
+    "rationale": "Below 100 mg/dL is the guideline goal for people at moderate risk; lower apoB is associated with less atherosclerosis and the goal tightens as overall risk rises."
+  },
+  "deep": "## What it is\n\nApolipoprotein B-100 is the structural protein of every VLDL, IDL, LDL and Lp(a) particle made by the liver, and each particle carries exactly one copy. (Chylomicrons from the gut carry a shorter form, apoB-48, which contributes little to a typical measurement.) Since about 90% of apoB particles are LDL, apoB closely tracks LDL particle number. LDL cholesterol (LDL-C), by contrast, measures how much cholesterol those particles carry, which varies from person to person.\n\n## Why it matters\n\n- **Causal role.** Genetic, epidemiological and trial evidence establishes LDL and related apoB particles as a cause of atherosclerotic cardiovascular disease, with risk proportional to both concentration and cumulative years of exposure (European Atherosclerosis Society consensus, Ference 2017).\n- **ApoB as the common currency.** A Mendelian randomization study comparing variants that lower triglycerides with variants that lower LDL-C found the benefit tracked the change in apoB, about 23% lower coronary risk per 10 mg/dL lower apoB, whichever lipid moved (Ference 2019).\n- **Discordance.** When apoB and LDL-C disagree, as is common with high triglycerides, obesity or diabetes, risk follows apoB more closely (UK Biobank, Marston 2022; review, Sniderman 2019).\n\n## How to read it\n\nUnits: mg/dL in the US, g/L elsewhere (mg/dL / 100 = g/L). No meaningful sex-specific range; men run slightly higher than women until menopause.\n\n- Many labs flag values above about 100-130 mg/dL; the 2018 ACC/AHA guideline treats 130 mg/dL or more as a risk-enhancing factor. The 2019 ESC/EAS guideline sets goals of below 100, 80 and 65 mg/dL for moderate, high and very-high risk.\n- **Population percentiles are not targets.** US adult medians are roughly 90-100 mg/dL, in a population where cardiovascular disease is the leading cause of death. Newborns and people with lifelong low-LDL gene variants sit around 50-70 mg/dL and have very little atherosclerosis. NHANES measured apoB in fasting subsamples between 2005 and 2016.\n\n## Causes of high\n\nFamilial hypercholesterolaemia and polygenic predisposition, diets high in saturated fat, excess weight and insulin resistance, type 2 diabetes, hypothyroidism, nephrotic syndrome and chronic kidney disease, menopause, pregnancy, and drugs including anabolic steroids, some antipsychotics, isotretinoin, cyclosporine and glucocorticoids.\n\n## Causes of low\n\nLipid-lowering therapy (statins, ezetimibe, bempedoic acid, PCSK9 inhibitors), favourable genetics (e.g. PCSK9 loss-of-function variants), hyperthyroidism, malnutrition or malabsorption, advanced liver disease, acute illness, and rare disorders such as abetalipoproteinaemia and hypobetalipoproteinaemia.\n\n## What moves it\n\n- **Fasting:** little effect; non-fasting samples are fine. Day-to-day biological variation is around 5-10%.\n- **Diet and weight:** weight loss and swapping saturated for unsaturated fat lower it modestly, often 5-15%.\n- **Age:** rises through early and middle adulthood.\n- **Inflammation:** acute illness transiently lowers it; avoid testing when unwell.\n- **Drugs:** statins lower apoB roughly in proportion to LDL-C, often by slightly less in percentage terms.\n- **Assay:** immunoturbidimetric or nephelometric methods calibrated to an international reference material; generally better standardized than calculated LDL-C.\n\n## What to test alongside\n\nLDL-C and non-HDL cholesterol (close cousins of apoB), triglycerides and HDL-C, Lp(a) (whose particles also carry apoB), fasting glucose, HbA1c and insulin (insulin resistance drives discordance), TSH if newly high, and coronary artery calcium scoring for imaging of actual plaque.\n\n---\n*Not medical advice: this page is educational; interpret your results with a clinician.*\n"
+}
