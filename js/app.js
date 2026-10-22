@@ -231,7 +231,7 @@
       html += '</div>';
     }
     $('#sideGroups').innerHTML = html;
-    $('#dataStatus').innerHTML = `Markers: ${esc(app.mode)}<br>Your data is saved in this browser on this device only.`;
+    $('#dataStatus').innerHTML = 'Your data is saved in this browser on this device only.';
     const p = state.profile;
     $('#profileBadge').innerHTML = (p.sex ? esc(SEXLABEL[p.sex].replace(/en$/, 'an')) : '<a href="#/labs">set sex</a>') + ' · ' +
       (p.birthYear ? 'born ' + esc(p.birthYear) : '<a href="#/labs">set birth year</a>') + ' · ' + state.entries.length + ' values';
@@ -317,7 +317,7 @@
 
   function renderHome(main) {
     const withVals = app.markers.filter((m) => latest(m.id));
-    let html = `<h1>Overview</h1><div class="sub">Population reference distributions from NHANES, with your own results placed on them. ${esc(app.mode)}.</div>`;
+    let html = `<h1>Overview</h1><div class="sub">Your lab results, compared with the population: see whether you're typical, high or low for your age and sex.</div>`;
     html += `<div class="panel"><div class="panel-head"><h2>My Z-scores</h2><span class="muted">latest value per marker vs ${userSex() ? SEXLABEL[userSex()].toLowerCase() : 'men (set your sex in My labs)'}</span><span class="spacer"></span>
       <label class="chk"><input type="checkbox" id="zAge" ${app.view.homeAge ? 'checked' : ''}> age-adjusted</label></div>`;
     html += withVals.length ? '<div id="zSummary" class="chart short"></div><div class="chart-note">Green |z|&lt;1, amber 1-2, red &gt;2. Click a dot to open the marker.</div>'
