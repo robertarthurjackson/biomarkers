@@ -229,5 +229,47 @@
   "unit": "%",
   "group": "iron",
   "source": "NHANES 2017-March 2020 pre-pandemic (P_FETIB); not measured for all adults in 2021-2023"
+ },
+ {
+  "id": "alp",
+  "name": "Alkaline phosphatase (ALP)",
+  "unit": "U/L",
+  "group": "liver",
+  "source": "NHANES 2021-2023 (BIOPRO_L)"
+ },
+ {
+  "id": "ggt",
+  "name": "Gamma-glutamyl transferase (GGT)",
+  "unit": "U/L",
+  "group": "liver",
+  "source": "NHANES 2021-2023 (BIOPRO_L)"
+ },
+ {
+  "id": "egfr",
+  "name": "eGFR (CKD-EPI 2021)",
+  "unit": "mL/min/1.73m2",
+  "group": "kidney",
+  "source": "NHANES 2021-2023 (BIOPRO_L); creatinine LBXSCR"
+ },
+ {
+  "id": "magnesium",
+  "name": "Magnesium (serum)",
+  "unit": "mg/dL",
+  "group": "vitamins_minerals",
+  "source": "NHANES 2021-2023 (BIOPRO_L)"
+ },
+ {
+  "id": "vitamin_b12",
+  "name": "Vitamin B12",
+  "unit": "pg/mL",
+  "group": "vitamins_minerals",
+  "source": "NHANES 2011-2014 (VITB12_G/H, pooled); most recent cycles measuring B12"
+ },
+ {
+  "id": "homocysteine",
+  "name": "Homocysteine",
+  "unit": "umol/L",
+  "group": "cardiometabolic",
+  "source": "NHANES 2005-2006 (HCY_D); last cycle measuring homocysteine"
  }
 ]
