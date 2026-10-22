@@ -11,9 +11,14 @@
     ['thyroid', 'Thyroid'],
     ['cardiometabolic', 'Cardiometabolic'],
     ['iron', 'Iron'],
+    ['liver', 'Liver'],
+    ['kidney', 'Kidney'],
+    ['vitamins_minerals', 'Vitamins & minerals'],
     ['lipids', 'Lipids'],
     ['other', 'Other'],
   ];
+  // Markers listed here come first within their group, in this order; the rest keep index order.
+  const MARKER_ORDER = ['testosterone_total', 'testosterone_free', 'shbg', 'dhea_s', 'estradiol', 'progesterone'];
   const C = {
     bg: '#12141a', grid: '#1f232c', text: '#cfd3dc', muted: '#8a909c', accent: '#f7931a',
     male: '#4aa3ff', female: '#ff6fae', good: '#22c55e', warn: '#f5a524', bad: '#ef4444',
@@ -107,7 +112,8 @@
     const order = GROUPS.map((g) => g[0]);
     app.markers = list.map((e) => app.byId[e.id]).sort((a, b) => {
       const ga = order.indexOf(a.group), gb = order.indexOf(b.group);
-      return (ga < 0 ? 99 : ga) - (gb < 0 ? 99 : gb);
+      const ra = MARKER_ORDER.indexOf(a.id), rb = MARKER_ORDER.indexOf(b.id);
+      return (ga < 0 ? 99 : ga) - (gb < 0 ? 99 : gb) || (ra < 0 ? 99 : ra) - (rb < 0 ? 99 : rb);
     });
     const nReal = app.markers.filter((m) => m._src === 'real').length;
     const nMock = app.markers.filter((m) => m._src === 'mock').length;
