@@ -52,6 +52,7 @@
   function unitKey(u) {
     return String(u || '').toLowerCase().replace(/\(.*?\)/g, '').replace(/\s+/g, '').replace(/[µμ]/g, 'u').replace('mcg', 'ug')
       .replace(/^uiu\/ml$/, 'miu/l') // µIU/mL and mIU/L are numerically identical (TSH)
+      .replace(/^iu\/l$/, 'u/l') // enzyme activity: IU/L = U/L
       .replace(/²/g, '2').replace(/^ml\/min(\/1\.73(m2)?)?$/, 'ml/min/1.73m2'); // eGFR spellings
   }
 
