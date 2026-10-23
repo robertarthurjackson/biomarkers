@@ -137,12 +137,15 @@
     return ok(k) ? k : 'all';
   }
   function applyPopView(m) {
-    if (!m._base) m._base = { sexes: m.sexes, population_note: m.population_note };
+    if (!m._base) m._base = { sexes: m.sexes, population_note: m.population_note, source: m.source, cycles: m.cycles };
     const k = variantKey(m, popView());
     const vr = k === 'all' ? null : m.variants[k];
     m._view = k;
     m.sexes = vr ? vr.sexes : m._base.sexes;
     m.population_note = vr ? vr.population_note : m._base.population_note;
+    // a variant may come from a different NHANES sample (e.g. 2011-16 for sex hormones)
+    m.source = vr && vr.source ? vr.source : m._base.source;
+    m.cycles = vr && vr.cycles ? vr.cycles : m._base.cycles;
   }
   function pctTreated(e) {
     return ['male', 'female'].filter((x) => e && e[x]).map((x) => `${SEXLABEL[x].toLowerCase()} ${e[x].pct_excluded_weighted}%`).join(', ');
@@ -171,12 +174,16 @@
     const vs = m.variants;
     if (m._view === 'all') {
       const u = vs.untreated;
-      return `<div class="popnote"><b>All NHANES participants</b>, including people on treatment${u && u.excluded ? ` (${esc(pctTreated(u.excluded))} of the weighted population)` : ''}. Switch to <i>${esc(u ? u.label : 'Untreated')}</i> to exclude them.</div>`;
+      return `<div class="popnote"><b>All NHANES participants</b>, including people on treatment${u && u.excluded ? ` (${esc(pctTreated(u.excluded))} of the weighted population${u.separate_sample ? ' in ' + esc(u.source) : ''})` : ''}. Switch to <i>${esc(u ? u.label : 'Untreated')}</i> to exclude them.</div>`;
     }
     const v = vs[m._view];
     const ex = v.excluded || {};
     const counts = ['male', 'female'].filter((x) => ex[x]).map((x) => `${SEXLABEL[x].toLowerCase()} ${ex[x].n_excluded} of ${ex[x].n_total} (${ex[x].pct_excluded_weighted}% weighted), n = ${ex[x].n_total - ex[x].n_excluded} remaining`).join('; ');
-    return `<div class="popnote"><b>${esc(v.label)} view</b>: ${esc(v.exclusion)}. Excluded ${esc(counts)}.` +
+    // separate earlier sample: show how much the exclusion itself moved the median
+    const meds = v.separate_sample ? ['male', 'female'].filter((x) => ex[x] && ex[x].median_before != null).map((x) =>
+      `${SEXLABEL[x].toLowerCase()} ${ex[x].median_before} to ${ex[x].median_after} ${m.unit}`).join('; ') : '';
+    const sep = v.separate_sample ? ` <b>Different sample:</b> ${esc(v.source)}, not a subset of the All NHANES view (${esc((m._base.cycles || []).join(', '))}); within it, the exclusion moved the median ${esc(meds)}. Any further gap to the All view reflects the earlier cohort, not the exclusion.` : '';
+    return `<div class="popnote"><b>${esc(v.label)} view</b>: ${esc(v.exclusion)}. Excluded ${esc(counts)}.${sep}` +
       (v.references && v.references.length ? `<br><span class="muted">Basis: ${v.references.map(esc).join('; ')}.</span>` : '') + '</div>';
   }
 
