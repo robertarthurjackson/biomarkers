@@ -106,6 +106,7 @@
       const m = { ...e, ...(doc || {}), _src: src || 'missing' };
       if (!doc) m.population = null;
       m.alt_units = m.alt_units || [];
+      applyPopView(m);
       app.byId[m.id] = m;
       app.content[m.id] = await getJson(`content/${m.id}.json`);
     }));
@@ -119,6 +120,64 @@
     const nMock = app.markers.filter((m) => m._src === 'mock').length;
     const nMiss = app.markers.length - nReal - nMock;
     app.mode = `${nReal} real` + (nMock ? `, ${nMock} mock` : '') + (nMiss ? `, ${nMiss} without data` : '');
+  }
+
+  // ---------------------------------------------------------------- population view (All NHANES / Untreated)
+  // Marker JSONs may carry `variants` {all, untreated, reference?}, each with the same `sexes` schema as the
+  // top-level block (which is always the all-participant aggregate). The chosen view is global and persisted
+  // in state.prefs.popView; it is applied by swapping m.sexes / m.population_note, so every chart, percentile,
+  // z-score and the user's value placement follow it. A marker lacking the chosen view falls back
+  // reference -> untreated -> all.
+  const POP_ORDER = ['all', 'untreated', 'reference'];
+  function popView() { return POP_ORDER.includes(state.prefs.popView) ? state.prefs.popView : 'all'; }
+  function variantKey(m, k) {
+    const vs = m.variants || {};
+    const ok = (x) => x === 'all' || (vs[x] && vs[x].sexes);
+    if (k === 'reference' && !ok(k)) k = 'untreated';
+    return ok(k) ? k : 'all';
+  }
+  function applyPopView(m) {
+    if (!m._base) m._base = { sexes: m.sexes, population_note: m.population_note };
+    const k = variantKey(m, popView());
+    const vr = k === 'all' ? null : m.variants[k];
+    m._view = k;
+    m.sexes = vr ? vr.sexes : m._base.sexes;
+    m.population_note = vr ? vr.population_note : m._base.population_note;
+  }
+  function pctTreated(e) {
+    return ['male', 'female'].filter((x) => e && e[x]).map((x) => `${SEXLABEL[x].toLowerCase()} ${e[x].pct_excluded_weighted}%`).join(', ');
+  }
+  function popTitle(m) {
+    const vs = m.variants || {};
+    return POP_ORDER.filter((k) => k !== 'all' && vs[k]).map((k) => `${vs[k].label}: ${vs[k].exclusion}.` +
+      (vs[k].references && vs[k].references.length ? ' Refs: ' + vs[k].references.join(' | ') : '')).join('\n\n');
+  }
+  /** Segmented control next to the sex toggle; disabled with an explanation when no variant exists. */
+  function popSeg(m) {
+    if (m.variants) {
+      const keys = POP_ORDER.filter((k) => k === 'all' || (m.variants[k] && m.variants[k].sexes));
+      return `<div class="seg" id="popSeg" title="${esc('Which NHANES participants make up the population. ' + popTitle(m))}">${keys.map((k) =>
+        `<button data-v="${k}" class="${m._view === k ? 'on' : ''}">${esc(k === 'all' ? 'All NHANES' : m.variants[k].label)}</button>`).join('')}</div>`;
+    }
+    if (m.variants_unavailable) {
+      return `<div class="seg disabled" id="popSeg" title="${esc(m.variants_unavailable)}"><button class="on" disabled>All NHANES</button><button disabled>Untreated</button></div>`;
+    }
+    return '';
+  }
+  /** One-paragraph caption: who is excluded and how many, with references. */
+  function popCaption(m) {
+    if (m.variants_unavailable) return `<div class="popnote">${esc(m.variants_unavailable)}</div>`;
+    if (!m.variants) return '';
+    const vs = m.variants;
+    if (m._view === 'all') {
+      const u = vs.untreated;
+      return `<div class="popnote"><b>All NHANES participants</b>, including people on treatment${u && u.excluded ? ` (${esc(pctTreated(u.excluded))} of the weighted population)` : ''}. Switch to <i>${esc(u ? u.label : 'Untreated')}</i> to exclude them.</div>`;
+    }
+    const v = vs[m._view];
+    const ex = v.excluded || {};
+    const counts = ['male', 'female'].filter((x) => ex[x]).map((x) => `${SEXLABEL[x].toLowerCase()} ${ex[x].n_excluded} of ${ex[x].n_total} (${ex[x].pct_excluded_weighted}% weighted), n = ${ex[x].n_total - ex[x].n_excluded} remaining`).join('; ');
+    return `<div class="popnote"><b>${esc(v.label)} view</b>: ${esc(v.exclusion)}. Excluded ${esc(counts)}.` +
+      (v.references && v.references.length ? `<br><span class="muted">Basis: ${v.references.map(esc).join('; ')}.</span>` : '') + '</div>';
   }
 
   /** Markers of a group: those with notes first, then the 'extended' ones (no content file). */
@@ -420,6 +479,7 @@
     if (pop && !S.sexStats(m, userSex() || 'male') && userSex()) html += `<div class="why">No ${SEXLABEL[userSex()].toLowerCase()} population data for this marker; showing ${SEXLABEL[v.sex].toLowerCase()} for reference only.</div>`;
     html += `<div class="panel"><div class="panel-head">
       ${pop ? `<div class="seg" id="sexSeg">${sexes.map((x) => `<button data-v="${x}" class="${v.sex === x ? 'on' : ''}">${SEXLABEL[x]}</button>`).join('')}</div>` : ''}
+      ${pop ? popSeg(m) : ''}
       ${pop && bands.length ? `<select id="ageSel" title="Age band: applies to histogram, percentile and Z-score">
         <option value="all" ${v.ageSel === 'all' ? 'selected' : ''}>All ages</option>
         ${state.profile.birthYear ? `<option value="auto" ${v.ageSel === 'auto' ? 'selected' : ''}>My age band</option>` : ''}
@@ -431,7 +491,7 @@
         <select name="unit">${units.map((u) => `<option ${u.unit === (v.trial ? v.trial.unit : du) ? 'selected' : ''}>${esc(u.unit)}</option>`).join('')}</select>
         <input name="date" type="date" value="${today()}">
         <button class="btn primary">Save</button></form></div>`;
-    html += `<div class="panel-body"><div class="statgrid" id="stats"></div><div id="rangeInfo" class="muted" style="font-size:12px"></div></div></div>`;
+    html += `<div class="panel-body">${pop ? popCaption(m) : ''}<div class="statgrid" id="stats"></div><div id="rangeInfo" class="muted" style="font-size:12px"></div></div></div>`;
 
     if (pop) {
       html += `<div class="panel"><div class="panel-head"><h2>Percentile bands by age</h2><span class="muted" id="ageSub"></span></div>
@@ -455,6 +515,11 @@
 
     const rerender = () => { purgeAll(); renderMarker(main, id); renderSidebar(); };
     $$('#sexSeg button').forEach((b) => (b.onclick = () => { v.sex = b.dataset.v; rerender(); }));
+    $$('#popSeg button:not([disabled])').forEach((b) => (b.onclick = () => {
+      state.prefs.popView = b.dataset.v; save();
+      app.markers.forEach(applyPopView);
+      rerender();
+    }));
     $$('#unitSeg button').forEach((b) => (b.onclick = () => { state.prefs.units[id] = b.dataset.v; save(); rerender(); }));
     if ($('#ageSel')) $('#ageSel').onchange = (e) => { v.ageSel = e.target.value; rerender(); };
     const on = (sel, key) => { const el = $(sel); if (el) el.onchange = () => { v[key] = el.checked; rerender(); }; };
@@ -594,7 +659,7 @@
     const s = S.sexStats(m, v.sex);
     const note = $('#ageNote');
     $('#ageSub').textContent = `${SEXLABEL[v.sex]} · P5 / P25 / P50 / P75 / P95`;
-    if (!s.by_age || !s.by_age.length) { $('#ageChart').outerHTML = '<div class="panel-body"><div class="empty">No age-band breakdown in this dataset.</div></div>'; return; }
+    if (!s.by_age || !s.by_age.length) { if ($('#ageChart')) $('#ageChart').outerHTML ='<div class="panel-body"><div class="empty">No age-band breakdown in this dataset.</div></div>'; return; }
     const cats = s.by_age.map((b) => b.band);
     const q = (k) => s.by_age.map((b) => { const x = bandQ(b, k, log); return x == null ? null : x * f; });
     const col = SEXCOL[v.sex];
@@ -651,7 +716,7 @@
     const note = $('#zNote');
     const label = v.ageSel === 'auto' ? `${SEXLABEL[sex].toLowerCase()}, your age band at each date` : v.ageSel === 'all' ? `${SEXLABEL[sex].toLowerCase()}, all ages` : `${SEXLABEL[sex].toLowerCase()} ${v.ageSel}`;
     $('#zSub').textContent = 'vs ' + label + (userSex() && userSex() !== sex ? ' (not your sex)' : '');
-    if (!es.length) { $('#zChart').outerHTML = '<div class="panel-body"><div class="empty">Save a value above to see your Z-score history.</div></div>'; return; }
+    if (!es.length) { if ($('#zChart')) $('#zChart').outerHTML ='<div class="panel-body"><div class="empty">Save a value above to see your Z-score history.</div></div>'; return; }
     const pts = es.map((e) => {
       const x = S.toPrimary(m, e.value, e.unit), co = cohort(m, sex, v.ageSel, e.date);
       return { e, x, co, r: evalCohort(m, x, co) };
@@ -721,7 +786,7 @@
     const el = $('#histChart');
     const f = dispFactor(m), du = dispUnit(m);
     const pts = es.map((e) => ({ d: e.date, y: S.toPrimary(m, e.value, e.unit) * f, raw: `${fmt(e.value)} ${e.unit}` })).filter((p) => isFinite(p.y));
-    if (!pts.length) { el.outerHTML = '<div class="panel-body"><div class="empty">No saved values yet. Use the value box above or <a href="#/labs">My labs</a>.</div></div>'; return; }
+    if (!pts.length) { if (el) el.outerHTML = '<div class="panel-body"><div class="empty">No saved values yet. Use the value box above or <a href="#/labs">My labs</a>.</div></div>'; return; }
     const hy = pts.map((p) => p.y);
     const histLog = !!(m.log_scale && v.logx);
     const rs = rangeShapes(m, userSex() || v.sex, f, 'y', [Math.min(...hy) * 0.6, Math.max(...hy) * 1.5], histLog);
