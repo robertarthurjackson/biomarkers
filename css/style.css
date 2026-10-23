@@ -140,3 +140,8 @@ table.data tr:hover td { background: #151820; }
 .srcnote.approx { border-left-color: var(--warn); }
 .storage-note .panel-body { font-size: 13px; line-height: 1.5; }
 .storage-note ul { margin: 6px 0; padding-left: 20px; }
+.srcfold { font-size: 12px; margin: 4px 0; }
+.srcfold > summary { cursor: pointer; color: var(--muted, #8b93a1); user-select: none; width: max-content; }
+.srcfold > summary:hover { color: var(--text); }
+.srcfold-body { margin-top: 4px; line-height: 1.45; color: #c9ccd3; }
+.srcfold.srcnote > summary { color: #c9ccd3; }

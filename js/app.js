@@ -184,7 +184,7 @@
       `${SEXLABEL[x].toLowerCase()} ${ex[x].median_before} to ${ex[x].median_after} ${m.unit}`).join('; ') : '';
     const sep = v.separate_sample ? ` <b>Different sample:</b> ${esc(v.source)}, not a subset of the All NHANES view (${esc((m._base.cycles || []).join(', '))}); within it, the exclusion moved the median ${esc(meds)}. Any further gap to the All view reflects the earlier cohort, not the exclusion.` : '';
     return `<div class="popnote"><b>${esc(v.label)} view</b>: ${esc(v.exclusion)}. Excluded ${esc(counts)}.${sep}` +
-      (v.references && v.references.length ? `<br><span class="muted">Basis: ${v.references.map(esc).join('; ')}.</span>` : '') + '</div>';
+      (v.references && v.references.length ? srcFold('Basis', `<span class="muted">${v.references.map(esc).join('; ')}.</span>`) : '') + '</div>';
   }
 
   /** Markers of a group: those with notes first, then the 'extended' ones (no content file). */
@@ -458,10 +458,14 @@
     const [lo, hi] = r[sex];
     return { lo: lo == null ? null : lo / f, hi: hi == null ? null : hi / f, source: r.source, note: r.note, rationale: r.rationale, unit: r.unit };
   }
+  /** Collapsed-by-default disclosure for source/citation text. */
+  function srcFold(label, inner, cls) {
+    return inner ? `<details class="srcfold${cls ? ' ' + cls : ''}"><summary>${label}</summary><div class="srcfold-body">${inner}</div></details>` : '';
+  }
   const RANGE_STYLE = { ref_range: { col: '#9aa4b2', label: 'Lab ref range' }, optimal: { col: '#2dd4bf', label: 'Optimal' } };
   function deepLink(m) {
     const c = app.content[m.id];
-    const src = `<div class="srcnote${m.approximate ? ' approx' : ''}">${m.approximate ? '<b>Approximate.</b> ' : ''}<b>Source:</b> ${esc(m.source || 'none')}${m.population_note ? ' · ' + esc(m.population_note) : ''}</div>`;
+    const src = srcFold(m.approximate ? 'Source <b>(approximate)</b>' : 'Source', `${esc(m.source || 'none')}${m.population_note ? ' · ' + esc(m.population_note) : ''}`, 'srcnote' + (m.approximate ? ' approx' : ''));
     return src + `<div class="chart-note">${c && c.summary ? esc(c.summary) + ' ' : ''}${c ? `<a href="#/d/${esc(m.id)}">Deep dive &raquo;</a>` : ''}</div>`;
   }
 
@@ -482,7 +486,7 @@
       (m.approximate ? '<span class="badge mock">approximate</span>' : '');
 
     let html = `<h1>${esc(m.name)} ${tags}</h1>
-      <div class="sub">${esc(m.source || '')}${pop ? ' · n = ' + sexes.map((x) => `${SEXLABEL[x].toLowerCase()} ${S.sexStats(m, x).n}`).join(', ') : ''}${m.population_note ? '<br>' + esc(m.population_note) : ''}</div>`;
+      <div class="sub">${pop ? 'n = ' + sexes.map((x) => `${SEXLABEL[x].toLowerCase()} ${S.sexStats(m, x).n}`).join(', ') : ''}${srcFold('Data source', `${esc(m.source || '')}${m.population_note ? '<br>' + esc(m.population_note) : ''}`)}</div>`;
     if (pop && !S.sexStats(m, userSex() || 'male') && userSex()) html += `<div class="why">No ${SEXLABEL[userSex()].toLowerCase()} population data for this marker; showing ${SEXLABEL[v.sex].toLowerCase()} for reference only.</div>`;
     html += `<div class="panel"><div class="panel-head">
       ${pop ? `<div class="seg" id="sexSeg">${sexes.map((x) => `<button data-v="${x}" class="${v.sex === x ? 'on' : ''}">${SEXLABEL[x]}</button>`).join('')}</div>` : ''}
@@ -510,7 +514,7 @@
         <div class="chart-note" id="distNote"></div>${deepLink(m)}</div>`;
       if (m.supplement && m.supplement.sexes) {
         html += `<div class="panel"><div class="panel-head"><h2>Supplementary reference: ${esc(m.supplement.unit || '')}</h2><span class="muted">${esc(m.supplement.source || '')}</span>${m.supplement.approximate ? ' <span class="badge mock">approximate</span>' : ''}</div>
-          <div id="suppChart" class="chart short"></div><div class="srcnote approx"><b>Citation:</b> ${esc(m.supplement.source || '')}${m.supplement.population_note ? ' · ' + esc(m.supplement.population_note) : ''}</div><div class="chart-note" id="suppNote"></div></div>`;
+          <div id="suppChart" class="chart short"></div>${srcFold('Citation', `${esc(m.supplement.source || '')}${m.supplement.population_note ? ' · ' + esc(m.supplement.population_note) : ''}`, 'srcnote approx')}<div class="chart-note" id="suppNote"></div></div>`;
       }
       html += `<div class="panel"><div class="panel-head"><h2>My Z-score vs cohort</h2><span class="muted" id="zSub"></span></div>
         <div id="zChart" class="chart short"></div><div class="chart-note" id="zNote"></div>${deepLink(m)}</div>`;
@@ -581,14 +585,15 @@
     if (co && co.table && co.table['50'] != null) stats.push([`Median (${co.label})`, `${fmt(co.table['50'] * f)} <small>${esc(du)}</small>`, `P5–P95 ${fmt(co.table['5'] * f)}–${fmt(co.table['95'] * f)}`]);
     $('#stats').innerHTML = stats.map(([k, val, sub]) => `<div class="stat"><div class="k">${esc(k)}</div><div class="v">${val}</div><div class="muted" style="font-size:11px">${esc(sub || '')}</div></div>`).join('');
     // range sources
-    const info = [];
+    const info = [], srcs = [];
     for (const kind of ['ref_range', 'optimal']) {
       const rg = rangeFor(m, kind, v.sex);
       if (!rg) continue;
-      if (rg.bad) info.push(`${RANGE_STYLE[kind].label}: given in ${esc(rg.unit)}, which doesn't convert to this marker's units, so it isn't drawn. Source: ${esc(rg.source || '')}`);
-      else info.push(`<span style="color:${RANGE_STYLE[kind].col}">${RANGE_STYLE[kind].label}</span> (${SEXLABEL[v.sex].toLowerCase()}): ${rg.lo == null ? '' : fmt(rg.lo * f)}–${rg.hi == null ? '' : fmt(rg.hi * f)} ${esc(du)}. Source: ${esc(rg.source || '')}${rg.note ? '. ' + esc(rg.note) : ''}${rg.rationale ? ' <i>' + esc(rg.rationale) + '</i>' : ''}`);
+      if (rg.bad) info.push(`${RANGE_STYLE[kind].label}: given in ${esc(rg.unit)}, which doesn't convert to this marker's units, so it isn't drawn.`);
+      else info.push(`<span style="color:${RANGE_STYLE[kind].col}">${RANGE_STYLE[kind].label}</span> (${SEXLABEL[v.sex].toLowerCase()}): ${rg.lo == null ? '' : fmt(rg.lo * f)}–${rg.hi == null ? '' : fmt(rg.hi * f)} ${esc(du)}`);
+      srcs.push(`<b>${RANGE_STYLE[kind].label}:</b> ${esc(rg.source || '')}${rg.note ? '. ' + esc(rg.note) : ''}${rg.rationale ? ' <i>' + esc(rg.rationale) + '</i>' : ''}`);
     }
-    $('#rangeInfo').innerHTML = info.join('<br>');
+    $('#rangeInfo').innerHTML = info.join('<br>') + srcFold('Range sources', srcs.join('<br>'));
     if (pop) { drawAge(m, v, es, cur); drawDist(m, v, cur, co); drawZ(m, v, es); if (m.supplement && m.supplement.sexes) drawSupp(m, v, cur); }
     drawHistory(m, v, es);
   }
@@ -817,17 +822,27 @@
     else {
       if (c.summary) html += `<p class="notes"><b>${esc(c.summary)}</b></p>`;
       if (c.why_it_matters) html += `<div class="panel"><div class="panel-head"><h2>Why it matters</h2></div><div class="panel-body notes">${esc(c.why_it_matters)}</div></div>`;
-      const rr = [];
+      const rr = [], rs = [];
       for (const kind of ['ref_range', 'optimal']) {
         const r = c[kind];
         if (!r) continue;
-        rr.push(`<tr><td style="color:${RANGE_STYLE[kind].col}">${RANGE_STYLE[kind].label}</td><td class="mono">${r.male ? esc(r.male.map((x) => x ?? '').join('–')) : '–'}</td><td class="mono">${r.female ? esc(r.female.map((x) => x ?? '').join('–')) : '–'}</td><td>${esc(r.unit || '')}</td><td>${esc(r.source || '')}${r.note ? '<br><span class="muted">' + esc(r.note) + '</span>' : ''}${r.rationale ? '<br><span class="muted">' + esc(r.rationale) + '</span>' : ''}</td></tr>`);
+        rr.push(`<tr><td style="color:${RANGE_STYLE[kind].col}">${RANGE_STYLE[kind].label}</td><td class="mono">${r.male ? esc(r.male.map((x) => x ?? '').join('–')) : '–'}</td><td class="mono">${r.female ? esc(r.female.map((x) => x ?? '').join('–')) : '–'}</td><td>${esc(r.unit || '')}</td></tr>`);
+        rs.push(`<b>${RANGE_STYLE[kind].label}:</b> ${esc(r.source || '')}${r.note ? '<br><span class="muted">' + esc(r.note) + '</span>' : ''}${r.rationale ? '<br><span class="muted">' + esc(r.rationale) + '</span>' : ''}`);
       }
-      if (rr.length) html += `<div class="panel"><div class="panel-head"><h2>Ranges</h2></div><div class="panel-body"><table class="data"><thead><tr><th></th><th>Men</th><th>Women</th><th>Unit</th><th>Source</th></tr></thead><tbody>${rr.join('')}</tbody></table></div></div>`;
+      if (rr.length) html += `<div class="panel"><div class="panel-head"><h2>Ranges</h2></div><div class="panel-body"><table class="data"><thead><tr><th></th><th>Men</th><th>Women</th><th>Unit</th></tr></thead><tbody>${rr.join('')}</tbody></table>${srcFold('Range sources', rs.join('<br><br>'))}</div></div>`;
       if (c.deep) html += `<div class="panel"><div class="panel-body notes">${window.marked ? window.marked.parse(String(c.deep)) : '<pre>' + esc(c.deep) + '</pre>'}</div></div>`;
     }
-    html += `<div class="sub" style="margin-top:20px">Population data: ${esc(m.source || 'none')}${m.population_note ? '. ' + esc(m.population_note) : ''}</div>`;
+    html += `<div class="sub" style="margin-top:20px">${srcFold('Population data source', `${esc(m.source || 'none')}${m.population_note ? '. ' + esc(m.population_note) : ''}`)}</div>`;
     main.innerHTML = html;
+    // fold "References"/"Sources" sections of the notes markdown
+    $$('.notes h2, .notes h3', main).forEach((h) => {
+      if (!/^\s*(references|sources|citations)\b/i.test(h.textContent)) return;
+      const d = document.createElement('details'); d.className = 'srcfold';
+      d.innerHTML = `<summary>${esc(h.textContent)}</summary>`;
+      const body = document.createElement('div'); body.className = 'srcfold-body'; d.appendChild(body);
+      while (h.nextElementSibling && !/^H[1-3]$/.test(h.nextElementSibling.tagName)) body.appendChild(h.nextElementSibling);
+      h.replaceWith(d);
+    });
     window.scrollTo(0, 0);
   }
 
