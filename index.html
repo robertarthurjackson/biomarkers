@@ -14,14 +14,22 @@
 <body>
 <header class="topbar">
   <button id="navToggle" class="nav-toggle" aria-label="Menu">&#9776;</button>
-  <a href="#/" class="logo"><span class="logo-u">_</span>biomarkers</a>
+  <a href="#/" class="logo" id="logoLink"><span class="logo-u">_</span>biomarkers<span class="logo-sub portal-only" hidden> labs</span></a>
+  <nav class="topnav portal-nav portal-only" hidden>
+    <a href="/explore/" class="active">Explore</a>
+    <a href="/tests">Tests</a>
+    <a href="/how-it-works">How it works</a>
+  </nav>
   <nav class="topnav">
     <a href="#/" data-nav="home">Overview</a>
     <a href="#/dash" data-nav="dash">My Dashboard</a>
     <a href="#/labs" data-nav="labs">My labs</a>
-    <a href="/tests" class="order-link" id="orderLink" hidden>Order tests</a>
   </nav>
   <div class="topbar-right" id="profileBadge"></div>
+  <div class="portal-right portal-only" hidden>
+    <a href="/cart">Cart</a>
+    <a href="/account" class="btn-outline">Sign in</a>
+  </div>
 </header>
 <div class="shell">
   <aside class="sidebar" id="sidebar">
@@ -38,6 +46,13 @@
 <script src="vendor/marked.min.js"></script>
 <script src="js/stats.js"></script>
 <script src="js/app.js"></script>
-<script>if (location.pathname.indexOf('/explore') === 0) document.getElementById('orderLink').hidden = false;</script>
+<script>
+// Served from the labs site (under /explore/): show the site-wide nav so the header matches every other page.
+if (location.pathname.indexOf('/explore') === 0) {
+  document.body.classList.add('portal');
+  document.querySelectorAll('.portal-only').forEach(function (el) { el.hidden = false; });
+  document.getElementById('logoLink').href = '/';
+}
+</script>
 </body>
 </html>

@@ -27,9 +27,17 @@ a:hover { text-decoration: underline; }
 .topnav { display: flex; gap: 4px; }
 .topnav a { color: var(--muted); padding: 6px 12px; border-radius: 4px; font-weight: 500; }
 .topnav a:hover { color: #fff; text-decoration: none; background: var(--panel2); }
-.topnav a.order-link { color: var(--accent); margin-left: 8px; }
 .topnav a.active { color: #fff; background: var(--panel2); box-shadow: inset 0 -2px 0 var(--accent); }
 .topbar-right { margin-left: auto; color: var(--muted); font-size: 12px; }
+/* Header when the tool is served from the labs site */
+.logo-sub { color: var(--muted); font-weight: 400; }
+body.portal .topbar { gap: 16px; }
+body.portal .portal-nav { padding-right: 16px; border-right: 1px solid var(--line); }
+body.portal .portal-right { display: flex; gap: 12px; align-items: center; font-size: 13px; }
+body.portal .portal-right a { color: var(--muted); padding: 6px 10px; border-radius: 4px; }
+body.portal .portal-right a:hover { color: #fff; background: var(--panel2); text-decoration: none; }
+body.portal .portal-right a.btn-outline { color: var(--text); border: 1px solid var(--line); }
+body.portal .topbar-right { margin-left: auto; }
 .nav-toggle { display: none; background: none; border: 0; color: #fff; font-size: 20px; cursor: pointer; }
 
 .shell { display: flex; min-height: calc(100vh - 52px); }
