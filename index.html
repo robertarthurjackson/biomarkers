@@ -12,24 +12,31 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- Site-wide header, shown only when the tool is served from the labs site. Markup and sizes
+     mirror the portal's layout header so the bar is identical on every page. -->
+<header class="portal-header portal-only" hidden>
+  <div class="portal-header-inner">
+    <a href="/" class="logo"><span class="logo-u">_</span>biomarkers<span class="logo-sub"> labs</span></a>
+    <nav class="topnav">
+      <a href="/explore/" class="active">Explore</a>
+      <a href="/tests">Tests</a>
+      <a href="/how-it-works">How it works</a>
+    </nav>
+    <div class="portal-right">
+      <a href="/cart">Cart</a>
+      <a href="/account" class="btn-outline">Sign in</a>
+    </div>
+  </div>
+</header>
 <header class="topbar">
   <button id="navToggle" class="nav-toggle" aria-label="Menu">&#9776;</button>
-  <a href="#/" class="logo" id="logoLink"><span class="logo-u">_</span>biomarkers<span class="logo-sub portal-only" hidden> labs</span></a>
-  <nav class="topnav portal-nav portal-only" hidden>
-    <a href="/explore/" class="active">Explore</a>
-    <a href="/tests">Tests</a>
-    <a href="/how-it-works">How it works</a>
-  </nav>
+  <a href="#/" class="logo" id="logoLink"><span class="logo-u">_</span>biomarkers</a>
   <nav class="topnav">
     <a href="#/" data-nav="home">Overview</a>
     <a href="#/dash" data-nav="dash">My Dashboard</a>
     <a href="#/labs" data-nav="labs">My labs</a>
   </nav>
   <div class="topbar-right" id="profileBadge"></div>
-  <div class="portal-right portal-only" hidden>
-    <a href="/cart">Cart</a>
-    <a href="/account" class="btn-outline">Sign in</a>
-  </div>
 </header>
 <div class="shell">
   <aside class="sidebar" id="sidebar">
@@ -51,7 +58,6 @@
 if (location.pathname.indexOf('/explore') === 0) {
   document.body.classList.add('portal');
   document.querySelectorAll('.portal-only').forEach(function (el) { el.hidden = false; });
-  document.getElementById('logoLink').href = '/';
 }
 </script>
 </body>
