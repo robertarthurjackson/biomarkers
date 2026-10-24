@@ -59,6 +59,20 @@
 if (location.pathname.indexOf('/explore') === 0) {
   document.body.classList.add('portal');
   document.querySelectorAll('.portal-only').forEach(function (el) { el.hidden = false; });
+  // Signed-in patients: pull released results from the portal into My labs (same local store the
+  // tool already uses), then reload once so the app picks them up. Anonymous visitors get [].
+  fetch('/api/me/results', { credentials: 'same-origin' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d || !d.entries || !d.entries.length) return;
+    var KEY = 'biomarkers.v1', st;
+    try { st = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { st = {}; }
+    st.entries = Array.isArray(st.entries) ? st.entries : []; st.profile = st.profile || {};
+    var k = function (e) { return [e.marker, e.date, Number(e.value), String(e.unit || '').toLowerCase().replace(/\s+/g, '')].join('|'); };
+    var have = {}; st.entries.forEach(function (e) { have[k(e)] = 1; });
+    var added = 0;
+    d.entries.forEach(function (e) { if (!have[k(e)]) { st.entries.push(e); have[k(e)] = 1; added++; } });
+    if (d.profile) { if (!st.profile.sex) st.profile.sex = d.profile.sex; if (!st.profile.birthYear) st.profile.birthYear = d.profile.birthYear; }
+    if (added) { localStorage.setItem(KEY, JSON.stringify(st)); if (!sessionStorage.getItem('q_merged')) { sessionStorage.setItem('q_merged', '1'); location.reload(); } }
+  }).catch(function () {});
 }
 </script>
 </body>
