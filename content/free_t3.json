@@ -2,7 +2,7 @@
   "id": "free_t3",
   "name": "Free T3 (free triiodothyronine)",
   "group": "thyroid",
-  "summary": "The unbound fraction of T3, the biologically active thyroid hormone; most T3 is made in tissues from T4 rather than secreted by the thyroid.",
+  "summary": "The unbound fraction of T3, the biologically active thyroid hormone; most T3 is made in tissues from T4 rather than secreted by the thyroid. Note: the population percentiles on this page come from an assay that reads higher than most labs'; use your lab's range.",
   "why_it_matters": "Free T3 is mainly useful for diagnosing and monitoring hyperthyroidism, where it can rise before or more than T4. It adds little for diagnosing hypothyroidism, and it falls in illness and with calorie restriction even when the thyroid is healthy, so a low value on its own is hard to interpret.",
   "ref_range": {
     "unit": "pg/mL",

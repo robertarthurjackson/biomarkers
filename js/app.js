@@ -487,6 +487,7 @@
 
     let html = `<h1>${esc(m.name)} ${tags}</h1>
       <div class="sub">${pop ? 'n = ' + sexes.map((x) => `${SEXLABEL[x].toLowerCase()} ${S.sexStats(m, x).n}`).join(', ') : ''}${srcFold('Data source', `${esc(m.source || '')}${m.population_note ? '<br>' + esc(m.population_note) : ''}`)}</div>`;
+    if (m.method_note) html += `<div class="why">${esc(m.method_note)}</div>`;
     if (pop && !S.sexStats(m, userSex() || 'male') && userSex()) html += `<div class="why">No ${SEXLABEL[userSex()].toLowerCase()} population data for this marker; showing ${SEXLABEL[v.sex].toLowerCase()} for reference only.</div>`;
     html += `<div class="panel"><div class="panel-head">
       ${pop ? `<div class="seg" id="sexSeg">${sexes.map((x) => `<button data-v="${x}" class="${v.sex === x ? 'on' : ''}">${SEXLABEL[x]}</button>`).join('')}</div>` : ''}

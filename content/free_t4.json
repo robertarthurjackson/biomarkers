@@ -2,7 +2,7 @@
   "id": "free_t4",
   "name": "Free T4 (free thyroxine)",
   "group": "thyroid",
-  "summary": "The unbound fraction of thyroxine, the main hormone secreted by the thyroid; read alongside TSH to confirm and grade thyroid dysfunction.",
+  "summary": "The unbound fraction of thyroxine, the main hormone secreted by the thyroid; read alongside TSH to confirm and grade thyroid dysfunction. Note: the population percentiles on this page come from an assay that reads lower than most labs'; a lab-normal free T4 will show as a high percentile. Use your lab's range.",
   "why_it_matters": "Free T4 shows whether an abnormal TSH reflects a real change in thyroid hormone supply, and it is the key test when the pituitary may be at fault, where TSH is unreliable. With TSH it is the main dose-monitoring test for levothyroxine. Higher values even within the normal range are associated with atrial fibrillation.",
   "ref_range": {
     "unit": "ng/dL",
