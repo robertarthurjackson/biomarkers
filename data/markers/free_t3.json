@@ -8,7 +8,7 @@
    "factor": 1.536
   }
  ],
- "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled)",
+ "source": "NHANES 2007-2012 (THYROD_E/F/G, pooled); supplement: Roche Elecsys reference interval (fitted)",
  "cycles": [
   "2007-2008",
   "2009-2010",
@@ -1391,5 +1391,29 @@
   }
  },
  "approximate": true,
- "method_note": "Method caveat: NHANES free T3 (Beckman Access) runs higher than the Roche and Abbott assays most labs use (NHANES median 3.25 pg/mL = 5.0 pmol/L versus a typical lab median near 4.5 pmol/L), so a lab-normal value may sit at a low percentile here. Treat the percentile as approximate."
+ "method_note": "Method caveat: NHANES free T3 (Beckman Access) runs higher than the Roche and Abbott assays most labs use (NHANES median 3.25 pg/mL = 5.0 pmol/L versus a typical lab median near 4.5 pmol/L), so a lab-normal value may sit at a low percentile here. Treat the percentile as approximate.",
+ "supplement": {
+  "source": "Roche Elecsys FT3 III reference interval (3.1-6.8 pmol/L), the method used by Alberta Precision Laboratories and most Canadian labs; log-normal fit (ours)",
+  "unit": "pmol/L",
+  "approximate": true,
+  "histogram": null,
+  "population_note": "The manufacturer publishes only the central 95% interval (3.1-6.8 pmol/L, apparently healthy adults; package insert 10/2022, as cited by Mayo Clinic Laboratories: 2.0-4.4 pg/mL). We fit a log-normal distribution through those two points to estimate percentiles on this method. No age or sex detail; use it to see roughly where a lab-method value sits, not as a population study.",
+  "sexes": {
+   "adults": {
+    "n": null,
+    "percentiles": {
+     "2.5": 3.1,
+     "5": 3.3,
+     "10": 3.55,
+     "25": 4.01,
+     "50": 4.59,
+     "75": 5.26,
+     "90": 5.94,
+     "95": 6.38,
+     "97.5": 6.8
+    },
+    "derived": "log-normal through the 2.5th and 97.5th percentiles"
+   }
+  }
+ }
 }

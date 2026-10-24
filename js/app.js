@@ -764,9 +764,9 @@
       const t = S.pctTable(g.percentiles);
       const col = k.startsWith('female') ? C.female : C.male;
       traces.push({ type: 'scatter', mode: 'lines+markers+text', x: t.map((r) => r[1]), y: t.map(() => label(k)), text: t.map((r) => 'P' + r[0]), textposition: 'top center', textfont: { size: 10, color: C.muted },
-        line: { color: rgba(col, 0.6), width: 6 }, marker: { size: 10, color: col }, name: label(k), hovertemplate: `${label(k)} (n ${g.n}): %{text} = %{x} ${esc(su)}${g.share_ge_125 != null ? ` · ${Math.round(g.share_ge_125 * 100)}% ≥ 125` : ''}<extra></extra>` });
+        line: { color: rgba(col, 0.6), width: 6 }, marker: { size: 10, color: col }, name: label(k), hovertemplate: `${label(k)}${g.n ? ` (n ${g.n})` : ''}: %{text} = %{x} ${esc(su)}${g.share_ge_125 != null ? ` · ${Math.round(g.share_ge_125 * 100)}% ≥ 125` : ''}<extra></extra>` });
     });
-    let noteTxt = 'Only published quantiles exist for this source (no histogram, tails or age bands), so percentiles outside the published range are shown as bounds.';
+    let noteTxt = sp.sexes.adults && sp.sexes.adults.derived ? 'Fitted from the manufacturer\'s reference interval on the Roche method; percentiles are estimates, with no age or sex detail.' : 'Only published quantiles exist for this source (no histogram, tails or age bands), so percentiles outside the published range are shown as bounds.';
     if (cur) {
       const xs = S.fromPrimary(m, cur.x, su);
       if (isFinite(xs)) {
