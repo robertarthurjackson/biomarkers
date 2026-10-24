@@ -877,8 +877,13 @@
   function renderLabs(main) {
     const p = state.profile;
     const yr = new Date().getFullYear();
+    // Served from the Quantile site, signed-in patients also see results pulled from their account.
+    const portal = document.body.classList.contains('portal');
+    const fromPortal = state.entries.some((e) => e.source === 'quantile');
     let html = `<h1>My labs</h1><div class="panel storage-note"><div class="panel-body">
-      <b>Your data is saved on this device only, in this browser.</b> It is never uploaded; we can't see it, and we can't recover it for you.
+      ${portal
+        ? `<b>Two kinds of data live here.</b> Results from tests you ordered through Quantile${fromPortal ? ` (${state.entries.filter((e) => e.source === 'quantile').length} values so far)` : ''} are stored in your Quantile account, in Canada, encrypted, and appear here automatically when you're signed in. Anything you add by hand or upload on this page yourself is saved on this device only, in this browser; it is never uploaded and we can't see it.`
+        : `<b>Your data is saved on this device only, in this browser.</b> It is never uploaded; we can't see it, and we can't recover it for you.`}
       <ul>
         <li><b>It stays</b> when you close the tab, quit the browser, or restart.</li>
         <li><b>It is lost</b> if you use a private/incognito window (wiped on close) or clear this site's browsing data.</li>
